@@ -1,0 +1,78 @@
+{% extends '_base.html' %}
+
+{% load stage_tags %}
+
+{% load i18n %}
+
+{% block content %}
+
+{% include 'includes/subnav.html' %}
+
+{% include 'includes/notification.html'%}
+
+
+<section class="section">
+    <div class="blocks-container">
+        <div class="main-block">
+            <div class="list-items">
+                {% if investors %}
+                {% for investor in investors %}
+                <div class="list-item-50">
+                    <div class="list-item-main-block">
+                        <h4 class="heading-semibold"> <a class="list-item-title" href="#">{{ investor.name }}</a></h2>
+                            <p class="text-light">{{ investor.description }}</p>
+
+                            <p class="text-light">
+                                <a class="list-item-link" href="#">2 deals</a>
+                            </p>
+
+                            {% if investor.funds %}
+                                <p class="text-light">{{ investor.funds|humanize_currency:"USD" }}</p>
+                            {% endif %}
+
+                            <a class="list-item-link text-semibold" href="{{ investor.website }}">{{ investor.website}}</a>
+                            <div class="list-item-links">
+                                <a class="list-item-link text-semibold" href="#">{{ investor.investor_type }}</a>
+                                <a class="list-item-link text-semibold" href="#">{{ investor.affiliation }}</a>
+                                {% if investor.apply_link %}
+                                <a class="list-item-link text-semibold" target="_blank"
+                                    href="{{ investor.apply_link }}">Apply for funding</a>
+                                {% endif %}
+                            </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="side-block">
+
+            <div class="filters-container">
+                <h3 class="heading-semibold">Type</h3>
+
+                {% get_all_investor_types as types %}
+                <ul class="filter-list">
+                    {% for type in types %}
+                    <li class="filter-item"><a class="text-light" href="#">{{ type }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- <div class="filters-container">
+                <h3 class="heading-semibold">Investments</h3>
+                <ul class="filter-list">
+                    <li class="filter-item"><a class="text-light" href="#">50k-100k</a></li>
+                    <li class="filter-item"><a class="text-light" href="#">0-10k</a></li>
+                    <li class="filter-item"><a class="text-light" href="#">10k-50k</a></li>
+                    <li class="filter-item"><a class="text-light" href="#">100k-500k</a></li>
+                    <li class="filter-item"><a class="text-light" href="#">over 500k</a></li>
+                </ul>
+            </div> -->
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}

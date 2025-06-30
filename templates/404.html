@@ -1,0 +1,29 @@
+{% extends '_base.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+{% include 'includes/notification.html'%}
+
+<section class="section">
+    <div class="hero">
+        <div class="hero-body">
+            <h1 class="hero-title heading-extrabold">{% trans 'Lost in Space? So is this Page!' %} </h1>
+            <p class="hero-subtitle text-light">{% trans 'We couldn\'t find anything here. Please try navigation to find what you\'re looking for.'%}</p>
+
+            <div class="cta-links">
+                <a class="btn btn-primary heading-regular" href="{% url 'registry:explore-programs' %}">Explore   &#8594;</a>
+                <a class="btn btn-regular heading-regular" href="{% url 'contribute:contribute' %}">Contribute</a>
+            </div>   
+        </div>
+
+        <div class="hero-side">
+
+        </div>
+    </div>
+</section>
+
+{% include 'includes/bottom-promotion.html' %}
+
+{% endblock content %}

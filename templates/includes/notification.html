@@ -1,0 +1,10 @@
+{% load notification_tags %}
+
+{% get_notification as notification %}
+{% if notification %}
+    <section class="section">
+        <p class="notification-message text-light">{{ notification.message }}</p>    
+    </section>
+{% endif %}
+
+

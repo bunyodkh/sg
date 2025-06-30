@@ -1,0 +1,8 @@
+{% load notification_tags %}
+
+{% get_active_cta as cta %}
+{% if cta %}
+<section class="bottom-promotion">
+    <p class="text-semibold">{{ cta.message }}.  <a class="text-semibold promotion-link" href="{{ cta.link }}" target="_blank"> {{ cta.link_text }} &#8594;</a></p>
+</section>
+{% endif %}

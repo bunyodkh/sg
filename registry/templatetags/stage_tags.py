@@ -1,5 +1,5 @@
 from django import template
-from ..models import InvestmentStage, InvestorType 
+from ..models import InvestmentStage, InvestorType, SupportProgramType 
 
 register = template.Library()
 
@@ -11,6 +11,11 @@ def get_all_stages():
 @register.simple_tag
 def get_all_investor_types():
     return InvestorType.objects.all()
+
+
+@register.simple_tag
+def get_all_support_program_types():
+    return SupportProgramType.objects.all()
 
 
 from django.template.defaultfilters import floatformat

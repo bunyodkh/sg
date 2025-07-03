@@ -38,7 +38,7 @@
 
         <div class="side-block">
 
-            <div class="filters-container">
+            <!-- <div class="filters-container">
                 <h3 class="heading-semibold">Investor Type</h3>
                 <ul class="filter-list">
                     <li class="filter-item"><a class="text-light" href="#">Fintech</a></li>
@@ -47,20 +47,23 @@
                     <li class="filter-item"><a class="text-light" href="#">Cryptotech</a></li>
                     <li class="filter-item"><a class="text-light" href="#">Fintech</a></li>
                 </ul>
-            </div>
+            </div> -->
 
+
+            {% get_all_stages as stages %}
+            {% if stages %}
             <div class="filters-container">
                 <h3 class="heading-semibold">Stages</h3>
-
-                {% get_all_stages as stages %}
+                                 
                 <ul class="filter-list">
                     {% for stage in stages %}
                     <li class="filter-item"><a class="text-light" href="#">{{ stage.name }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
+            {% endif %}
 
-            <div class="filters-container">
+            <!-- <div class="filters-container">
                 <h3 class="heading-semibold">Investment</h3>
                 <ul class="filter-list">
                     <li class="filter-item"><a class="text-light" href="#">50k-100k</a></li>
@@ -69,7 +72,7 @@
                     <li class="filter-item"><a class="text-light" href="#">100k-500k</a></li>
                     <li class="filter-item"><a class="text-light" href="#">over 500k</a></li>
                 </ul>
-            </div>
+            </div> -->
 
         </div>
     </div>

@@ -41,17 +41,19 @@
         </div>
 
         <div class="side-block">
-     
+            
+            {% get_all_support_program_types as types %}
+            {% if types %}
             <div class="filters-container">
                 <h3 class="heading-semibold">Type</h3>
-                
-                {% get_all_investor_types as types %}
                 <ul class="filter-list">
                     {% for type in types %}
                         <li class="filter-item"><a class="text-light" href="#">{{ type }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
+            {% endif %}
+
 
             <!-- <div class="filters-container">
                 <h3 class="heading-semibold">Investments</h3>

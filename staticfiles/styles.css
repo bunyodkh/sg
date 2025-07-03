@@ -330,12 +330,16 @@ ul {
 	margin-top: 0.5rem;
 }
 
-.filter-item>a,
+.filter-item > a {
+	text-transform: capitalize;
+}
+
+.filter-item > a,
 .list-item-title {
 	border-bottom: 1px solid #e2e2e2;
 }
 
-.filter-item>a:hover,
+.filter-item > a:hover,
 .list-item-title:hover {
 	border-bottom: 1px solid #000000;
 }

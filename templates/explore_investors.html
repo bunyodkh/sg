@@ -22,9 +22,9 @@
                         <h4 class="heading-semibold"> <a class="list-item-title" href="#">{{ investor.name }}</a></h2>
                             <p class="text-light">{{ investor.description }}</p>
 
-                            <p class="text-light">
+                            <!-- <p class="text-light">
                                 <a class="list-item-link" href="#">2 deals</a>
-                            </p>
+                            </p> -->
 
                             {% if investor.funds %}
                                 <p class="text-light">{{ investor.funds|humanize_currency:"USD" }}</p>

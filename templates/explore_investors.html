@@ -30,7 +30,10 @@
                                 <p class="text-light">{{ investor.funds|humanize_currency:"USD" }}</p>
                             {% endif %}
 
+                            {% if investor.website %}
                             <a class="list-item-link text-semibold" href="{{ investor.website }}">{{ investor.website}}</a>
+                            {% endif %}
+                            
                             <div class="list-item-links">
                                 <a class="list-item-link text-semibold" href="#">{{ investor.investor_type }}</a>
                                 <a class="list-item-link text-semibold" href="#">{{ investor.affiliation }}</a>

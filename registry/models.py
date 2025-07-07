@@ -64,12 +64,7 @@ class Organization(models.Model):
     address = models.CharField(_("Address"), max_length=255, blank=True, null=True)
     capacity = models.DecimalField(_("Funds Available"), max_digits=15, decimal_places=0, blank=True, null=True, help_text=_("Total funds available for investment in USD"))
 
-    organization_type = models.CharField(_("Organization Type"), max_length=50, choices=[
-        ('investor', _("Investor")),
-        ('support_organization', _("Support Organization")),
-    ], default='investor', help_text=_("Organization Type"))
-
-    investor_type = models.ForeignKey('InvestorType', verbose_name=_("Investor Type"), on_delete=models.SET_NULL, blank=True, null=True, related_name='investors')
+    organization_type = models.ForeignKey('OrganizationType', verbose_name=_("Organization Type"), on_delete=models.SET_NULL, blank=True, null=True, related_name='organizations')
     affiliation = models.ForeignKey('OrganizationAffiliation', verbose_name=_("Affiliation"), on_delete=models.SET_NULL, blank=True, null=True, related_name='investors')
     apply_link = models.CharField(_("Application Link"), blank=True, null=True, help_text=_("Link to apply for investment or partnership"))
 
@@ -86,20 +81,20 @@ class Organization(models.Model):
 
 
 
-class InvestorType(models.Model):
-    name = models.CharField(_("Type Name"), max_length=100)
+class OrganizationType(models.Model):
+    name = models.CharField(_("Organization Type Name"), max_length=100)
     
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name = _("Investor Type")
-        verbose_name_plural = _("Investor Types")
+        verbose_name = _("Organization Type")
+        verbose_name_plural = _("Organization Types")
         ordering = ['name']
 
 
 class OrganizationAffiliation(models.Model):
-    name = models.CharField(_("Type Name"), max_length=100)
+    name = models.CharField(_("Affiliation"), max_length=100)
     
     def __str__(self):
         return self.name

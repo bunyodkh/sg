@@ -7,7 +7,7 @@ from .models import (
     TargetAudience,
 
     Organization, 
-    InvestorType,
+    OrganizationType,
     OrganizationAffiliation,
     Investment, 
     InvestmentStage,
@@ -39,7 +39,7 @@ class InvestmentStageAdmin(ModelAdmin):
 
 @admin.register(Organization)
 class OrganizationAdmin(ModelAdmin):
-    list_display = ('name', 'organization_type', 'affiliation', 'investor_type',)
+    list_display = ('name', 'organization_type', 'affiliation',)
     search_fields = ('name', 'description', 'website', 'email')
     list_filter = ('organization_type',)
 
@@ -60,8 +60,8 @@ class TargetAudienceAdmin(ModelAdmin):
     list_filter = ('created_at',)
 
 
-@admin.register(InvestorType)
-class InvestorTypeAdmin(ModelAdmin):
+@admin.register(OrganizationType)
+class OrganizationType(ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
 

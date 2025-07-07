@@ -35,7 +35,7 @@
                             {% endif %}
                             
                             <div class="list-item-links">
-                                <a class="list-item-link text-semibold" href="#">{{ organization.investor_type }}</a>
+                                <a class="list-item-link text-semibold" href="#">{{ organization.organization_type }}</a>
                                 <a class="list-item-link text-semibold" href="#">{{ organization.affiliation }}</a>
                                 {% if organization.apply_link %}
                                 <a class="list-item-link text-semibold" target="_blank"
@@ -51,7 +51,7 @@
 
         <div class="side-block">
 
-            {% get_all_investor_types as types %}
+            {% get_all_organization_types as types %}
             {% if types %}
             <div class="filters-container">
                 <h3 class="heading-semibold">Type</h3>

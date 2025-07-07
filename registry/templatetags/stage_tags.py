@@ -1,5 +1,5 @@
 from django import template
-from ..models import InvestmentStage, InvestorType, SupportProgramType 
+from ..models import InvestmentStage, OrganizationType, SupportProgramType 
 
 register = template.Library()
 
@@ -9,8 +9,8 @@ def get_all_stages():
 
 
 @register.simple_tag
-def get_all_investor_types():
-    return InvestorType.objects.all()
+def get_all_organization_types():
+    return OrganizationType.objects.all()
 
 
 @register.simple_tag

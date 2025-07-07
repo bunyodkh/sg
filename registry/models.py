@@ -69,7 +69,7 @@ class Organization(models.Model):
         ('support_organization', _("Support Organization")),
     ], default='investor', help_text=_("Organization Type"))
 
-    investor_type = models.ForeignKey('InvestorType', verbose_name=_("Type"), on_delete=models.SET_NULL, blank=True, null=True, related_name='investors')
+    investor_type = models.ForeignKey('InvestorType', verbose_name=_("Investor Type"), on_delete=models.SET_NULL, blank=True, null=True, related_name='investors')
     affiliation = models.ForeignKey('OrganizationAffiliation', verbose_name=_("Affiliation"), on_delete=models.SET_NULL, blank=True, null=True, related_name='investors')
     apply_link = models.CharField(_("Application Link"), blank=True, null=True, help_text=_("Link to apply for investment or partnership"))
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Startup, Investor, SupportProgram
+from .models import Startup, Organization, SupportProgram
 
 
 def index(request):
@@ -12,9 +12,9 @@ def explore_startups(request):
     return render(request, 'explore_startups.html', { 'startups': startups })
 
 
-def explore_investors(request):
-    investors = Investor.objects.all().order_by('name')
-    return render(request, 'explore_investors.html', { 'investors': investors })
+def explore_organizations(request):
+    organizations = Organization.objects.all().order_by('name')
+    return render(request, 'explore_organizations.html', { 'organizations': organizations })
 
 
 def explore_programs(request):

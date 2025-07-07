@@ -6,18 +6,15 @@ from .models import (
     StartupCategory, 
     TargetAudience,
 
-    Investor, 
+    Organization, 
     InvestorType,
-    InvestorAffiliation,
+    OrganizationAffiliation,
     Investment, 
     InvestmentStage,
 
     SupportProgram,
     SupportProgramType,
     SupportProgramCycle,
-
-    SupportOrganizations,
-
 )
 
 @admin.register(Startup)
@@ -27,14 +24,12 @@ class StartupAdmin(ModelAdmin):
     list_filter = ('categories',)
 
 
-
 @admin.register(StartupCategory)
 class StartupCategoryAdmin(ModelAdmin):
     list_display = ('category',)
     search_fields = ('category',)
 
     
-
 @admin.register(InvestmentStage)
 class InvestmentStageAdmin(ModelAdmin):
     list_display = ('name',)
@@ -42,11 +37,11 @@ class InvestmentStageAdmin(ModelAdmin):
 
     
 
-@admin.register(Investor)
-class InvestorAdmin(ModelAdmin):
+@admin.register(Organization)
+class OrganizationAdmin(ModelAdmin):
     list_display = ('name', 'capacity')
     search_fields = ('name', 'description', 'website', 'email')
-    list_filter = ('investor_type',)
+    list_filter = ('organization_type',)
 
     
 
@@ -71,8 +66,8 @@ class InvestorTypeAdmin(ModelAdmin):
     search_fields = ('name',)
 
 
-@admin.register(InvestorAffiliation)
-class InvestorAffiliationAdmin(ModelAdmin):
+@admin.register(OrganizationAffiliation)
+class OrganizationAffiliationAdmin(ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
 
@@ -96,10 +91,3 @@ class SupportProgramCycleAdmin(ModelAdmin):
     list_display = ('name', 'program','status', 'start_date', 'end_date')
     search_fields = ('name', 'program')
     list_filter = ('status', 'start_date', 'end_date')
-
-
-@admin.register(SupportOrganizations)
-class SupportOrganizationsAdmin(ModelAdmin):
-    list_display = ('name', 'created_at')
-    search_fields = ('name', 'description', 'website')
-    list_filter = ('created_at',)

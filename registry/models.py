@@ -56,15 +56,21 @@ class TargetAudience(models.Model):
 
 
 
-class Investor(models.Model):
+class Organization(models.Model):
     name = models.CharField(_("Name"), max_length=255, blank=False, null=False)
     description = models.TextField(_("Description"), blank=True, null=True)
     website = models.CharField(_("Website"), blank=True, null=True)
     email = models.EmailField(_("Email"), blank=True, null=True)
     address = models.CharField(_("Address"), max_length=255, blank=True, null=True)
     capacity = models.DecimalField(_("Funds Available"), max_digits=15, decimal_places=0, blank=True, null=True, help_text=_("Total funds available for investment in USD"))
+
+    organization_type = models.CharField(_("Organization Type"), max_length=50, choices=[
+        ('investor', _("Investor")),
+        ('support_organization', _("Support Organization")),
+    ], default='investor', help_text=_("Organization Type"))
+
     investor_type = models.ForeignKey('InvestorType', verbose_name=_("Type"), on_delete=models.SET_NULL, blank=True, null=True, related_name='investors')
-    affiliation = models.ForeignKey('InvestorAffiliation', verbose_name=_("Affiliation"), on_delete=models.SET_NULL, blank=True, null=True, related_name='investors')
+    affiliation = models.ForeignKey('OrganizationAffiliation', verbose_name=_("Affiliation"), on_delete=models.SET_NULL, blank=True, null=True, related_name='investors')
     apply_link = models.CharField(_("Application Link"), blank=True, null=True, help_text=_("Link to apply for investment or partnership"))
 
     created_at = models.DateTimeField(_("Created at"), auto_now_add=True)
@@ -74,8 +80,8 @@ class Investor(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = _("Investor")
-        verbose_name_plural = _("Investors")
+        verbose_name = _("Organization")
+        verbose_name_plural = _("Organizations")
         ordering = ['name']
 
 
@@ -87,26 +93,26 @@ class InvestorType(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = _("Investor Type")
-        verbose_name_plural = _("Investor Types")
+        verbose_name = _("Organization Type")
+        verbose_name_plural = _("Organization Types")
         ordering = ['name']
 
 
-class InvestorAffiliation(models.Model):
+class OrganizationAffiliation(models.Model):
     name = models.CharField(_("Type Name"), max_length=100)
     
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name = _("Investor Affiliation")
-        verbose_name_plural = _("Investor Affiliations")
+        verbose_name = _("Organization Affiliation")
+        verbose_name_plural = _("Organization Affiliations")
         ordering = ['name']
 
 
 class Investment(models.Model):
     startup = models.ForeignKey('Startup', verbose_name=_("Startup"), on_delete=models.CASCADE, related_name='investments')
-    investor = models.ForeignKey('Investor', verbose_name=_("Investor"), on_delete=models.CASCADE, related_name='investments')
+    investor = models.ForeignKey('Organization', verbose_name=_("Investor"), on_delete=models.CASCADE, related_name='investments')
     amount = models.DecimalField(_("Investment Amount"), max_digits=15, decimal_places=0, blank=False, null=False)
     details = models.TextField(_("Details"), blank=True, null=True, help_text=_("Additional details about the investment"))
     date = models.DateField(_("Investment Date"), blank=True, null=True, help_text=_("Date of the deal"))
@@ -148,7 +154,7 @@ class SupportProgram(models.Model):
     website = models.CharField(_("Website"), blank=True, null=True)
     email = models.EmailField(_("Email"), blank=True, null=True)
 
-    managing_organizations = models.ManyToManyField('SupportOrganizations', verbose_name=_("Managing Organizations"), blank=True, related_name='programs', help_text=_("Organizations managing the incubator program"))
+    managing_organizations = models.ManyToManyField('Organization', verbose_name=_("Managing Organizations"), blank=True, related_name='programs', help_text=_("Organizations managing the incubator program"))
 
     mode = models.CharField(_("Mode"), max_length=50, choices=[
         ('online', _("Online")),
@@ -240,22 +246,3 @@ class SupportProgramCycle(models.Model):
         verbose_name = _("Support Program Cycle")
         verbose_name_plural = _("Support Program Cycles")
         ordering = ['start_date']
-
-
-class SupportOrganizations(models.Model):
-    name = models.CharField(_("Name"), max_length=255, blank=False, null=False)
-    description = models.TextField(_("Description"), blank=True, null=True)
-    website = models.CharField(_("Website"), blank=True, null=True)
-    email = models.EmailField(_("Email"), blank=True, null=True)
-    address = models.CharField(_("Address"), max_length=255, blank=True, null=True)
-
-    created_at = models.DateTimeField(_("Created at"), auto_now_add=True)
-    updated_at = models.DateTimeField(_("Updated at"), auto_now=True)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = _("Support Organization")
-        verbose_name_plural = _("Support Organizations")
-        ordering = ['name']

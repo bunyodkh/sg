@@ -17,6 +17,24 @@ class Startup(models.Model):
 
     target_audience = models.ManyToManyField('TargetAudience', verbose_name=_("Target Audience"), blank=True, related_name='startups', help_text=_("Target audience for the startup"))
 
+    development_stage = models.ForeignKey(
+        'DevelopmentStage',
+        verbose_name=_("Development Stage"),
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        related_name='startups'
+    )
+    
+    funding_stage = models.ForeignKey(
+        'InvestmentStage',
+        verbose_name=_("Funding Stage"),
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        related_name='startups'
+    )
+
     def __str__(self):
         return self.name
 
@@ -129,18 +147,35 @@ class Investment(models.Model):
 class InvestmentStage(models.Model):
     name = models.CharField(_("Stage Name"), max_length=50, blank=False, null=False)
     description = models.TextField(_("Description"), max_length=200, blank=True, null=True)
+    
 
     def __str__(self):
         return f"{self.name}"
 
     class Meta:
-        verbose_name = _("Startup Stage")
-        verbose_name_plural = _("Startup Stage")
+        verbose_name = _("Funding Stage")
+        verbose_name_plural = _("Funding Stage")
         ordering = ['created_at']
 
     created_at = models.DateTimeField(_("Created at"), auto_now_add=True)
     updated_at = models.DateTimeField(_("Updated at"), auto_now=True)
 
+
+
+class DevelopmentStage(models.Model):
+    name = models.CharField(_("Stage Name"), max_length=50, blank=False, null=False)
+    description = models.TextField(_("Description"), max_length=200, blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.name}"
+
+    class Meta:
+        verbose_name = _("Development Stage")
+        verbose_name_plural = _("Development Stage")
+        ordering = ['created_at']
+
+    created_at = models.DateTimeField(_("Created at"), auto_now_add=True)
+    updated_at = models.DateTimeField(_("Updated at"), auto_now=True)
 
 
 class SupportProgram(models.Model):

@@ -55,10 +55,23 @@
             {% endif %}
 
 
-            {% get_all_stages as stages %}
+            {% get_all_funding_stages as stages %}
             {% if stages %}
             <div class="filters-container">
                 <h3 class="heading-semibold">{% trans 'Funding stages' %}</h3>
+                                 
+                <ul class="filter-list">
+                    {% for stage in stages %}
+                    <li class="filter-item"><a class="text-light" href="#">{{ stage.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% get_all_development_stages as stages %}
+            {% if stages %}
+            <div class="filters-container">
+                <h3 class="heading-semibold">{% trans 'Development stages' %}</h3>
                                  
                 <ul class="filter-list">
                     {% for stage in stages %}

@@ -11,6 +11,7 @@ from .models import (
     OrganizationAffiliation,
     Investment, 
     InvestmentStage,
+    DevelopmentStage,
 
     SupportProgram,
     SupportProgramType,
@@ -35,7 +36,12 @@ class InvestmentStageAdmin(ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
 
-    
+
+@admin.register(DevelopmentStage)
+class DevelopmentStageAdmin(ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+
 
 @admin.register(Organization)
 class OrganizationAdmin(ModelAdmin):

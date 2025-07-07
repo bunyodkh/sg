@@ -1,11 +1,16 @@
 from django import template
-from ..models import InvestmentStage, OrganizationType, SupportProgramType, StartupCategory 
+from ..models import InvestmentStage, OrganizationType, SupportProgramType, StartupCategory, DevelopmentStage 
 
 register = template.Library()
 
 @register.simple_tag
-def get_all_stages():
+def get_all_funding_stages():
     return InvestmentStage.objects.all()
+
+
+@register.simple_tag
+def get_all_development_stages():
+    return DevelopmentStage.objects.all()
 
 
 @register.simple_tag

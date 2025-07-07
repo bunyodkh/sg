@@ -21,7 +21,11 @@
                             <div class="list-item-main-block">
                                 <h4 class="heading-semibold"> <a class="list-item-title" href="#">{{ startup.name }}</a></h2>
                                     <p class="text-light">{{ startup.description }}</p>
-                                    <a class="list-item-link text-semibold" href="{{ startup.website }}">{{ startup.website }}</a>
+                                    
+                                    {% if startup.website %}
+                                    <a class="list-item-link text-semibold" href="{{ startup.website }}">{{ startup.website|truncatechars:25}}</a>
+                                    {% endif %}
+                                    
                                     <div class="list-item-links">
                                         <a class="list-item-link text-semibold" href="#">{{ startup.country }}</a>
 

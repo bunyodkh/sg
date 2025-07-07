@@ -39,7 +39,7 @@ class InvestmentStageAdmin(ModelAdmin):
 
 @admin.register(Organization)
 class OrganizationAdmin(ModelAdmin):
-    list_display = ('name', 'capacity')
+    list_display = ('name', 'organization_type', 'affiliation', 'investor_type',)
     search_fields = ('name', 'description', 'website', 'email')
     list_filter = ('organization_type',)
 

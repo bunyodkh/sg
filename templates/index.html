@@ -9,12 +9,12 @@
 <section class="section">
     <div class="hero">
         <div class="hero-body">
-            <h1 class="hero-title heading-extrabold">Welcome to the Startup Guide</h1>
-            <p class="hero-subtitle text-light">Explore the startup ecosystem of Uzbekistan. Find list of startups, VCs, accelerators, incubators, and other helpful resources to support your entrepreneural journey.</p>
+            <h1 class="hero-title heading-extrabold">{% trans 'Welcome to the Startup Guide' %}</h1>
+            <p class="hero-subtitle text-light">{% trans 'Explore the startup ecosystem of Uzbekistan. Find list of startups, VCs, accelerators, incubators, and other helpful resources to support your entrepreneural journey.' %}</p>
 
             <div class="cta-links">
-                <a class="btn btn-primary heading-regular" href="{% url 'registry:explore-programs' %}">Explore   &#8594;</a>
-                <a class="btn btn-regular heading-regular" href="{% url 'contribute:contribute' %}">Contribute</a>
+                <a class="btn btn-primary heading-regular" href="{% url 'registry:explore-programs' %}">{% trans 'Explore' %}   &#8594;</a>
+                <a class="btn btn-regular heading-regular" href="{% url 'contribute:contribute' %}">{% trans 'Contribute' %}</a>
             </div>
             
         </div>

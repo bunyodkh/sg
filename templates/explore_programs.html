@@ -25,7 +25,7 @@
                                     <a class="list-item-link text-semibold" href="#">{{ investor.investor_type }}</a>
                                     <a class="list-item-link text-semibold" href="#">{{ investor.affiliation }}</a>
                                     {% if investor.apply_link %}
-                                        <a class="list-item-link text-semibold" target="_blank" href="{{ investor.apply_link }}">Apply for funding</a>
+                                        <a class="list-item-link text-semibold" target="_blank" href="{{ investor.apply_link }}">{% trans 'Apply for support' %}</a>
                                     {% endif %}
                                 </div>
                             </div>
@@ -41,11 +41,10 @@
         </div>
 
         <div class="side-block">
-            
             {% get_all_support_program_types as types %}
             {% if types %}
             <div class="filters-container">
-                <h3 class="heading-semibold">Type</h3>
+                <h3 class="heading-semibold">{% trans 'Program types' %}</h3>
                 <ul class="filter-list">
                     {% for type in types %}
                         <li class="filter-item"><a class="text-light" href="#">{{ type }}</a></li>
@@ -53,18 +52,6 @@
                 </ul>
             </div>
             {% endif %}
-
-
-            <!-- <div class="filters-container">
-                <h3 class="heading-semibold">Investments</h3>
-                <ul class="filter-list">
-                    <li class="filter-item"><a class="text-light" href="#">50k-100k</a></li>
-                    <li class="filter-item"><a class="text-light" href="#">0-10k</a></li>
-                    <li class="filter-item"><a class="text-light" href="#">10k-50k</a></li>
-                    <li class="filter-item"><a class="text-light" href="#">100k-500k</a></li>
-                    <li class="filter-item"><a class="text-light" href="#">over 500k</a></li>
-                </ul>
-            </div> -->
             
         </div>
     </div>

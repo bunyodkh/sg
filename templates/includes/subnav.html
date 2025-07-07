@@ -1,13 +1,13 @@
+{% load i18n %}
+
 <section class="section">
     <div class="menu-container">
         <ul class="menu">
-            <li class="menu-item"><a class="text-regular" href="{% url 'registry:explore-programs' %}">Programs</a></li>
+            <li class="menu-item"><a class="text-regular" href="{% url 'registry:explore-programs' %}">{% trans 'Support Programs' %}</a></li>
 
 
-            <li class="menu-item"><a class="text-regular" href="{% url 'registry:explore-startups' %}">Startups</a></li>
-            <li class="menu-item"><a class="text-regular" href="{% url 'registry:explore-organizations' %}">Organizations</a></li>
-<!-- 
-            <li class="menu-item"><a class="text-regular" href="#">Organizations</a></li> -->
+            <li class="menu-item"><a class="text-regular" href="{% url 'registry:explore-startups' %}">{% trans 'Startups' %}</a></li>
+            <li class="menu-item"><a class="text-regular" href="{% url 'registry:explore-organizations' %}">{% trans 'Organizations' %} </a></li>
         </ul>
     </div>
 </section>

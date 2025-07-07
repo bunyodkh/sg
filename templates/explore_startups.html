@@ -38,22 +38,23 @@
 
         <div class="side-block">
 
-            <!-- <div class="filters-container">
-                <h3 class="heading-semibold">Investor Type</h3>
+            {% get_all_startup_categories as categories%}
+            {% if categories%}
+            <div class="filters-container">
+                <h3 class="heading-semibold">{% trans 'Spheres'%}</h3>
                 <ul class="filter-list">
-                    <li class="filter-item"><a class="text-light" href="#">Fintech</a></li>
-                    <li class="filter-item"><a class="text-light" href="#">Medtech</a></li>
-                    <li class="filter-item"><a class="text-light" href="#">Edutech</a></li>
-                    <li class="filter-item"><a class="text-light" href="#">Cryptotech</a></li>
-                    <li class="filter-item"><a class="text-light" href="#">Fintech</a></li>
+                    {% for cat in categories %}
+                    <li class="filter-item"><a class="text-light" href="#">{{ cat }}</a></li>
+                    {% endfor %}
                 </ul>
-            </div> -->
+            </div>
+            {% endif %}
 
 
             {% get_all_stages as stages %}
             {% if stages %}
             <div class="filters-container">
-                <h3 class="heading-semibold">Stages</h3>
+                <h3 class="heading-semibold">{% trans 'Funding stages' %}</h3>
                                  
                 <ul class="filter-list">
                     {% for stage in stages %}
@@ -62,17 +63,6 @@
                 </ul>
             </div>
             {% endif %}
-
-            <!-- <div class="filters-container">
-                <h3 class="heading-semibold">Investment</h3>
-                <ul class="filter-list">
-                    <li class="filter-item"><a class="text-light" href="#">50k-100k</a></li>
-                    <li class="filter-item"><a class="text-light" href="#">0-10k</a></li>
-                    <li class="filter-item"><a class="text-light" href="#">10k-50k</a></li>
-                    <li class="filter-item"><a class="text-light" href="#">100k-500k</a></li>
-                    <li class="filter-item"><a class="text-light" href="#">over 500k</a></li>
-                </ul>
-            </div> -->
 
         </div>
     </div>

@@ -22,14 +22,6 @@
                         <h4 class="heading-semibold"> <a class="list-item-title" href="#">{{ organization.name }}</a></h2>
                             <p class="text-light">{{ organization.description }}</p>
 
-                            <!-- <p class="text-light">
-                                <a class="list-item-link" href="#">2 deals</a>
-                            </p> -->
-
-                            {% if organization.funds %}
-                                <p class="text-light">{{ organization.funds|humanize_currency:"USD" }}</p>
-                            {% endif %}
-
                             {% if organization.website %}
                             <a class="list-item-link text-semibold" href="{{ investor.website }}">{{ organization.website}}</a>
                             {% endif %}
@@ -39,7 +31,7 @@
                                 <a class="list-item-link text-semibold" href="#">{{ organization.affiliation }}</a>
                                 {% if organization.apply_link %}
                                 <a class="list-item-link text-semibold" target="_blank"
-                                    href="{{ investor.apply_link }}">Apply for support</a>
+                                    href="{{ investor.apply_link }}">{% trans 'Apply for support'%} </a>
                                 {% endif %}
                             </div>
                     </div>
@@ -54,7 +46,7 @@
             {% get_all_organization_types as types %}
             {% if types %}
             <div class="filters-container">
-                <h3 class="heading-semibold">Type</h3>
+                <h3 class="heading-semibold">{% trans 'Organization types'%}</h3>
                 <ul class="filter-list">
                     {% for type in types %}
                     <li class="filter-item"><a class="text-light" href="#">{{ type }}</a></li>

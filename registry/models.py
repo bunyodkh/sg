@@ -93,8 +93,8 @@ class InvestorType(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = _("Organization Type")
-        verbose_name_plural = _("Organization Types")
+        verbose_name = _("Investor Type")
+        verbose_name_plural = _("Investor Types")
         ordering = ['name']
 
 

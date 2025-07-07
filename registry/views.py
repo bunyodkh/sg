@@ -13,7 +13,8 @@ def explore_startups(request):
 
 
 def explore_organizations(request):
-    organizations = Organization.objects.all().order_by('name')
+    organizations = Organization.objects.all()
+    print(organizations)
     return render(request, 'explore_organizations.html', { 'organizations': organizations })
 
 

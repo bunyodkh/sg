@@ -15,31 +15,31 @@
     <div class="blocks-container">
         <div class="main-block">
             <div class="list-items">
-                {% if investors %}
-                {% for investor in investors %}
+                {% if organization %}
+                {% for organization in organizations %}
                 <div class="list-item-50">
                     <div class="list-item-main-block">
-                        <h4 class="heading-semibold"> <a class="list-item-title" href="#">{{ investor.name }}</a></h2>
-                            <p class="text-light">{{ investor.description }}</p>
+                        <h4 class="heading-semibold"> <a class="list-item-title" href="#">{{ organization.name }}</a></h2>
+                            <p class="text-light">{{ organization.description }}</p>
 
                             <!-- <p class="text-light">
                                 <a class="list-item-link" href="#">2 deals</a>
                             </p> -->
 
-                            {% if investor.funds %}
-                                <p class="text-light">{{ investor.funds|humanize_currency:"USD" }}</p>
+                            {% if organization.funds %}
+                                <p class="text-light">{{ organization.funds|humanize_currency:"USD" }}</p>
                             {% endif %}
 
-                            {% if investor.website %}
-                            <a class="list-item-link text-semibold" href="{{ investor.website }}">{{ investor.website}}</a>
+                            {% if organization.website %}
+                            <a class="list-item-link text-semibold" href="{{ investor.website }}">{{ organization.website}}</a>
                             {% endif %}
                             
                             <div class="list-item-links">
-                                <a class="list-item-link text-semibold" href="#">{{ investor.investor_type }}</a>
-                                <a class="list-item-link text-semibold" href="#">{{ investor.affiliation }}</a>
-                                {% if investor.apply_link %}
+                                <a class="list-item-link text-semibold" href="#">{{ organization.investor_type }}</a>
+                                <a class="list-item-link text-semibold" href="#">{{ organization.affiliation }}</a>
+                                {% if organization.apply_link %}
                                 <a class="list-item-link text-semibold" target="_blank"
-                                    href="{{ investor.apply_link }}">Apply for funding</a>
+                                    href="{{ investor.apply_link }}">Apply for support</a>
                                 {% endif %}
                             </div>
                     </div>

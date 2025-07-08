@@ -71,7 +71,7 @@ def organization_type_detail(request, slug):
 
 def explore_programs(request):
     program_list = SupportProgram.objects.all().order_by('name')
-    paginator = Paginator(program_list, 2)  # Show 10 programs per page
+    paginator = Paginator(program_list, 10) 
     page_number = request.GET.get('page')
     programs = paginator.get_page(page_number)
     return render(request, 'explore_programs.html', { 'programs': programs })

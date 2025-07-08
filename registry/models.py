@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 from django_countries.fields import CountryField
 
@@ -35,6 +37,8 @@ class Startup(models.Model):
         related_name='startups'
     )
 
+    show_on_website = models.BooleanField(_("Show on Website"), default=True, help_text=_('Show startup on the startup explore page.'))
+
     def __str__(self):
         return self.name
 
@@ -45,9 +49,25 @@ class Startup(models.Model):
 
 
 
+
 class StartupCategory(models.Model):
     category = models.CharField(_("Category"), max_length=100, blank=False, null=False)
+    slug = models.SlugField(_("Slug"), unique=True, max_length=100, blank=True)
 
+    def save(self, *args, **kwargs):
+        base_slug = slugify(self.category)
+        slug = base_slug
+        counter = 1
+        if not self.slug or StartupCategory.objects.filter(slug=self.slug).exclude(pk=self.pk).exists() or self.slug != base_slug:
+            while StartupCategory.objects.filter(slug=slug).exclude(pk=self.pk).exists():
+                slug = f"{base_slug}-{counter}"
+                counter += 1
+            self.slug = slug
+        super().save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse('registry:startup-category-detail', kwargs={'slug': self.slug})
+    
     def __str__(self):
         return f"{self.category}"
 
@@ -99,11 +119,28 @@ class Organization(models.Model):
 
 
 
+
 class OrganizationType(models.Model):
     name = models.CharField(_("Organization Type Name"), max_length=100)
-    
+    slug = models.SlugField(_("Slug"), unique=True, max_length=100, blank=True)
+
+    def save(self, *args, **kwargs):
+        base_slug = slugify(self.name)
+        slug = base_slug
+        counter = 1
+        # Only regenerate slug if it's blank or the name has changed
+        if not self.slug or OrganizationType.objects.filter(slug=self.slug).exclude(pk=self.pk).exists() or self.slug != base_slug:
+            while OrganizationType.objects.filter(slug=slug).exclude(pk=self.pk).exists():
+                slug = f"{base_slug}-{counter}"
+                counter += 1
+            self.slug = slug
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return reverse('registry:organization-type-detail', kwargs={'slug': self.slug})
 
     class Meta:
         verbose_name = _("Organization Type")
@@ -147,7 +184,21 @@ class Investment(models.Model):
 class InvestmentStage(models.Model):
     name = models.CharField(_("Stage Name"), max_length=50, blank=False, null=False)
     description = models.TextField(_("Description"), max_length=200, blank=True, null=True)
-    
+    slug = models.SlugField(_("Slug"), unique=True, max_length=100, blank=True)
+
+    def save(self, *args, **kwargs):
+        base_slug = slugify(self.name)
+        slug = base_slug
+        counter = 1
+        if not self.slug or InvestmentStage.objects.filter(slug=self.slug).exclude(pk=self.pk).exists() or self.slug != base_slug:
+            while InvestmentStage.objects.filter(slug=slug).exclude(pk=self.pk).exists():
+                slug = f"{base_slug}-{counter}"
+                counter += 1
+            self.slug = slug
+        super().save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse('registry:startup-funding-stage-detail', kwargs={'slug': self.slug})
 
     def __str__(self):
         return f"{self.name}"
@@ -165,7 +216,22 @@ class InvestmentStage(models.Model):
 class DevelopmentStage(models.Model):
     name = models.CharField(_("Stage Name"), max_length=50, blank=False, null=False)
     description = models.TextField(_("Description"), max_length=200, blank=True, null=True)
+    slug = models.SlugField(_("Slug"), unique=True, max_length=100, blank=True)
 
+    def save(self, *args, **kwargs):
+        base_slug = slugify(self.name)
+        slug = base_slug
+        counter = 1
+        if not self.slug or DevelopmentStage.objects.filter(slug=self.slug).exclude(pk=self.pk).exists() or self.slug != base_slug:
+            while DevelopmentStage.objects.filter(slug=slug).exclude(pk=self.pk).exists():
+                slug = f"{base_slug}-{counter}"
+                counter += 1
+            self.slug = slug
+        super().save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse('registry:startup-development-stage-detail', kwargs={'slug': self.slug})
+    
     def __str__(self):
         return f"{self.name}"
 
@@ -210,9 +276,6 @@ class SupportProgram(models.Model):
         return self.name
     
     def get_active_cycle(self):
-        """
-        Returns the first upcoming or ongoing cycle for this support program, or None if none exist.
-        """
         return self.cycles.filter(status__in=['upcoming', 'ongoing']).order_by('start_date').first()
 
     class Meta:
@@ -224,7 +287,23 @@ class SupportProgram(models.Model):
 class SupportProgramType(models.Model): 
     name = models.CharField(_("Type"), max_length=100, blank=False, null=False)
     description = models.TextField(_("Description"), blank=True, null=True)
+    slug = models.SlugField(_("Slug"), unique=True, max_length=100, blank=True)
 
+
+    def save(self, *args, **kwargs):
+        base_slug = slugify(self.name)
+        slug = base_slug
+        counter = 1
+        if not self.slug or SupportProgramType.objects.filter(slug=self.slug).exclude(pk=self.pk).exists() or self.slug != base_slug:
+            while SupportProgramType.objects.filter(slug=slug).exclude(pk=self.pk).exists():
+                slug = f"{base_slug}-{counter}"
+                counter += 1
+            self.slug = slug
+        super().save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse('registry:startup-support-program-detail', kwargs={'slug': self.slug})
+    
     def __str__(self):
         return self.name
 
@@ -264,7 +343,6 @@ class SupportProgramCycle(models.Model):
     ], default='open', help_text=_("Current application status for the program cycle"))
     
     apply_link = models.CharField(_("Application Link"), blank=True, null=True, help_text=_("Link to apply for the incubator program"))
-
 
     created_at = models.DateTimeField(_("Created at"), auto_now_add=True)
     updated_at = models.DateTimeField(_("Updated at"), auto_now=True)

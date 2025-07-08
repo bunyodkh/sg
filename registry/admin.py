@@ -1,5 +1,7 @@
 from django.contrib import admin
 from unfold.admin import ModelAdmin
+from django import forms
+
 
 from .models import (
     Startup, 
@@ -18,11 +20,14 @@ from .models import (
     SupportProgramCycle,
 )
 
+
 @admin.register(Startup)
 class StartupAdmin(ModelAdmin):
     list_display = ('name', 'website', 'created_at')
     search_fields = ('name', 'description', 'website')
     list_filter = ('categories',)
+    filter_horizontal = ('categories',)
+
 
 
 @admin.register(StartupCategory)
@@ -84,6 +89,7 @@ class SupportProgramAdmin(ModelAdmin):
     list_display = ('name', 'created_at')
     search_fields = ('name', 'description', 'website')
     list_filter = ('cycles',)
+    filter_vertical = ('managing_organizations',)
 
 
 @admin.register(SupportProgramType)

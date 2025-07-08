@@ -112,6 +112,24 @@ ul {
 	margin: 0 auto;
 }
 
+.pagination {
+	padding: 2rem;
+	
+}
+
+.pagination > a {
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.pagination > a, 
+.pagination > span {
+	font-size: 0.9rem;
+}
+
+.pagination > a:hover {
+	border-bottom: 1px solid #000;
+}
+
 .header {
 	padding: 1rem 2rem;
 	display: flex;

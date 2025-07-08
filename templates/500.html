@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+{% include 'includes/notification.html'%}
+
+<section class="section">
+    <div class="hero">
+        <div class="hero-body">
+            <h1 class="hero-title heading-extrabold">{% trans 'Server error!' %} </h1>
+            <p class="hero-subtitle text-light">{% trans "Oops! Something went wrong on our end. Please try again in a moment." %}</p>
+
+            <div class="cta-links">
+                <a class="btn btn-primary heading-regular" href="{% url 'registry:explore-programs' %}">Explore   &#8594;</a>
+                <a class="btn btn-regular heading-regular" href="{% url 'contribute:contribute' %}">Contribute</a>
+            </div>   
+        </div>
+
+        <div class="hero-side">
+
+        </div>
+    </div>
+</section>
+
+{% include 'includes/bottom-promotion.html' %}
+
+{% endblock content %}
+

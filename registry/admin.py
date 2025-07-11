@@ -23,7 +23,7 @@ from .models import (
 
 @admin.register(Startup)
 class StartupAdmin(ModelAdmin):
-    list_display = ('name', 'website', 'created_at')
+    list_display = ('name', 'website', 'operation_status')
     search_fields = ('name', 'description', 'website')
     list_filter = ('categories',)
     filter_horizontal = ('categories',)

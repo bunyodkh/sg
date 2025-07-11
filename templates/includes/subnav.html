@@ -1,13 +1,14 @@
 {% load i18n %}
 
+{% load stage_tags %}
+
 <section class="section">
     <div class="menu-container">
         <ul class="menu">
-            <li class="menu-item"><a class="text-regular" href="{% url 'registry:explore-programs' %}">{% trans 'Support Programs' %}</a></li>
-
-
-            <li class="menu-item"><a class="text-regular" href="{% url 'registry:explore-startups' %}">{% trans 'Startups' %}</a></li>
-            <li class="menu-item"><a class="text-regular" href="{% url 'registry:explore-organizations' %}">{% trans 'Organizations' %} </a></li>
+            <li class="menu-item">
+                <a class="text-regular list-item-title {% if request.resolver_match.url_name == 'explore-programs' %}menu-item-active text-semibold{% endif %}" href="{% url 'registry:explore-programs' %}">{% trans 'Support Programs' %}</a><span class="menu-item-counter  text-semibold">{% get_all_support_program_count %}</span></li>
+            <li class="menu-item"><a class="text-regular list-item-title {% if request.resolver_match.url_name == 'explore-startups' %}menu-item-active  text-semibold{% endif %}" href="{% url 'registry:explore-startups' %}">{% trans 'Startups' %}</a><span class="menu-item-counter  text-semibold">{% get_all_startup_count %}</span></li>
+            <li class="menu-item"><a class="text-regular list-item-title {% if request.resolver_match.url_name == 'explore-organizations' %}menu-item-active  text-semibold{% endif %}" href="{% url 'registry:explore-organizations' %}">{% trans 'Organizations' %}</a><span class="menu-item-counter  text-semibold">{% get_all_organization_count %}</span></li>
         </ul>
     </div>
 </section>

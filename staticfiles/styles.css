@@ -249,6 +249,19 @@ ul {
 	gap: 1.5rem;
 }
 
+.menu-item-counter {
+	display: inline-block;
+    padding: 0 0.5rem;
+    background: yellow;
+	font-size: 0.8rem;
+	border-radius: 1rem;
+	margin-left: 0.3rem;
+}
+
+.menu-item-active {
+	border-color: #000 !important;
+}
+
 .blocks-container {
 	padding: 2rem;
 	display: flex;

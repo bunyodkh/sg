@@ -1,5 +1,14 @@
 from django import template
-from ..models import InvestmentStage, OrganizationType, SupportProgramType, StartupCategory, DevelopmentStage 
+from ..models import (
+    InvestmentStage, 
+    OrganizationType, 
+    SupportProgramType, 
+    StartupCategory, 
+    DevelopmentStage, 
+    Startup,
+    SupportProgram, 
+    Organization
+) 
 
 register = template.Library()
 
@@ -24,8 +33,29 @@ def get_all_startup_categories():
 
 
 @register.simple_tag
+def get_active_startup_count():
+    return Startup.objects.filter(operation_status='active', show_on_website=True).count()
+
+
+@register.simple_tag
+def get_all_startup_count():
+    return Startup.objects.count()
+
+
+@register.simple_tag
 def get_all_support_program_types():
     return SupportProgramType.objects.all()
+
+@register.simple_tag
+def get_all_support_program_count():
+    return SupportProgram.objects.count()
+
+
+@register.simple_tag
+def get_all_organization_count():
+    return Organization.objects.count()
+
+
 
 
 from django.template.defaultfilters import floatformat

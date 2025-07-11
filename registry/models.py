@@ -37,6 +37,13 @@ class Startup(models.Model):
         related_name='startups'
     )
 
+    operation_status = models.CharField(_("Operation status"), max_length=50, choices=[
+        ('active', _("Active / Operating")),
+        ('inactive', _("Inactive / Dormant")),
+        ('closed', _("Discontinued / Closed")),
+        ('unknown', _("Unknown / Not Assessed"))
+    ], default='active', help_text=_("Is the startup currently active or not?"))
+
     show_on_website = models.BooleanField(_("Show on Website"), default=True, help_text=_('Show startup on the startup explore page.'))
 
     def __str__(self):

@@ -19,7 +19,7 @@ def index(request):
 
 def explore_startups(request):
     startup_list = Startup.objects.all().order_by('name')
-    paginator = Paginator(startup_list, 10)
+    paginator = Paginator(startup_list, 12)
     page_number = request.GET.get('page')
     startups = paginator.get_page(page_number)
     return render(request, 'explore_startups.html', { 'startups': startups })

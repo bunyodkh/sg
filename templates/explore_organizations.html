@@ -30,8 +30,7 @@
                                 <a class="list-item-link text-semibold" href="#">{{ organization.organization_type }}</a>
                                 <a class="list-item-link text-semibold" href="#">{{ organization.affiliation }}</a>
                                 {% if organization.apply_link %}
-                                <a class="list-item-link text-semibold" target="_blank"
-                                    href="{{ investor.apply_link }}">{% trans 'Apply for support'%} </a>
+                                <a class="list-item-link text-semibold" target="_blank" href="{{ organization.apply_link }}">{% trans 'Apply for support'%} </a>
                                 {% endif %}
                             </div>
                     </div>

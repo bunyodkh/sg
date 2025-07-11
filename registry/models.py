@@ -116,6 +116,8 @@ class Organization(models.Model):
     created_at = models.DateTimeField(_("Created at"), auto_now_add=True)
     updated_at = models.DateTimeField(_("Updated at"), auto_now=True)
 
+    show_on_website = models.BooleanField(_("Show on Website"), default=True, help_text=_('Show organization on the organization explore page.'))
+
     def __str__(self):
         return self.name
 

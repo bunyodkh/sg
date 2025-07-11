@@ -53,7 +53,7 @@ def startup_funding_stage_detail(request, slug):
 
 
 def explore_organizations(request):
-    organization_list = Organization.objects.all().order_by('name')
+    organization_list = Organization.objects.filter(show_on_website=True).order_by('name')
     paginator = Paginator(organization_list, 10)  
     page_number = request.GET.get('page')
     organizations = paginator.get_page(page_number)

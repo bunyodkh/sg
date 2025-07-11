@@ -143,3 +143,15 @@ COUNTRIES_FIRST = [
 ]
 
 COUNTRIES_FLAG_URL = "flags/{code}.gif"
+
+
+from django.templatetags.static import static
+
+
+UNFOLD = {
+    "SITE_HEADER": "Startup Guide Admin",
+    "SITE_TITLE": "Startup Guide",
+
+    "SITE_ICON": lambda request: static("images/favicon-16x16.png"),
+    "SITE_LOGO": lambda request: static("images/favicon-32x32.png"),  # both modes, optimise for 32px height
+}

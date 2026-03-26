@@ -1,0 +1,753 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-26 20:50+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\config\settings.py:118
+msgid "English"
+msgstr ""
+
+#: .\config\settings.py:119
+msgid "Russian"
+msgstr ""
+
+#: .\config\settings.py:120
+msgid "Uzbek"
+msgstr ""
+
+#: .\contribute\forms.py:11 .\space\forms.py:11
+msgid "Your fullname"
+msgstr "Ваше полное имя"
+
+#: .\contribute\forms.py:12 .\space\forms.py:12
+msgid "Your email address to which we can reply"
+msgstr "Ваш email для связи"
+
+#: .\contribute\forms.py:13
+msgid "Describe how would you like to contribute"
+msgstr ""
+
+#: .\contribute\forms.py:16 .\contribute\models.py:6 .\registry\models.py:9
+#: .\registry\models.py:105 .\registry\models.py:257 .\space\forms.py:21
+#: .\space\models.py:6
+msgid "Name"
+msgstr "Имя"
+
+#: .\contribute\forms.py:17 .\contribute\models.py:7 .\registry\models.py:108
+#: .\registry\models.py:260 .\space\forms.py:22 .\space\models.py:7
+msgid "Email"
+msgstr "Электронная почта"
+
+#: .\contribute\forms.py:18 .\contribute\models.py:8 .\contribute\models.py:17
+msgid "Message"
+msgstr ""
+
+#: .\contribute\forms.py:28 .\space\forms.py:40
+msgid "Name is required."
+msgstr "Имя обязательно."
+
+#: .\contribute\forms.py:34 .\space\forms.py:46
+msgid "Email is required."
+msgstr "Укажите email."
+
+#: .\contribute\forms.py:40
+msgid "Message is required."
+msgstr ""
+
+#: .\contribute\models.py:13 .\space\models.py:25
+msgid "Created At"
+msgstr ""
+
+#: .\contribute\models.py:14 .\space\models.py:26
+msgid "Updated At"
+msgstr ""
+
+#: .\contribute\models.py:18
+msgid "Messages"
+msgstr ""
+
+#: .\contribute\views.py:12
+msgid "Thank you for your message. We will contact you very soon."
+msgstr ""
+
+#: .\contribute\views.py:15 .\space\views.py:20
+msgid "Please correct the errors below."
+msgstr "Пожалуйста, исправьте ошибки в форме."
+
+#: .\registry\models.py:10 .\registry\models.py:106 .\registry\models.py:195
+#: .\registry\models.py:227 .\registry\models.py:258 .\registry\models.py:298
+msgid "Description"
+msgstr ""
+
+#: .\registry\models.py:11 .\registry\models.py:107 .\registry\models.py:259
+msgid "Website"
+msgstr ""
+
+#: .\registry\models.py:12
+msgid "Categories"
+msgstr ""
+
+#: .\registry\models.py:14 .\registry\models.py:91 .\registry\models.py:116
+#: .\registry\models.py:180 .\registry\models.py:220 .\registry\models.py:252
+#: .\registry\models.py:275 .\registry\models.py:356
+msgid "Created at"
+msgstr ""
+
+#: .\registry\models.py:15 .\registry\models.py:92 .\registry\models.py:117
+#: .\registry\models.py:181 .\registry\models.py:221 .\registry\models.py:253
+#: .\registry\models.py:276 .\registry\models.py:357
+msgid "Updated at"
+msgstr ""
+
+#: .\registry\models.py:17 .\registry\models.py:270
+msgid "Country"
+msgstr ""
+
+#: .\registry\models.py:17 .\registry\models.py:270
+msgid "Select Country"
+msgstr ""
+
+#: .\registry\models.py:18 .\registry\models.py:271 .\space\forms.py:24
+#: .\space\models.py:17
+msgid "Region"
+msgstr "Регион"
+
+#: .\registry\models.py:20 .\registry\models.py:98
+msgid "Target Audience"
+msgstr ""
+
+#: .\registry\models.py:20 .\registry\models.py:89
+msgid "Target audience for the startup"
+msgstr ""
+
+#: .\registry\models.py:24 .\registry\models.py:248 .\registry\models.py:249
+msgid "Development Stage"
+msgstr ""
+
+#: .\registry\models.py:33 .\registry\models.py:216 .\registry\models.py:217
+msgid "Funding Stage"
+msgstr ""
+
+#: .\registry\models.py:40
+msgid "Operation status"
+msgstr ""
+
+#: .\registry\models.py:41
+msgid "Active / Operating"
+msgstr ""
+
+#: .\registry\models.py:42
+msgid "Inactive / Dormant"
+msgstr ""
+
+#: .\registry\models.py:43
+msgid "Discontinued / Closed"
+msgstr ""
+
+#: .\registry\models.py:44
+msgid "Unknown / Not Assessed"
+msgstr ""
+
+#: .\registry\models.py:45
+msgid "Is the startup currently active or not?"
+msgstr ""
+
+#: .\registry\models.py:47 .\registry\models.py:119
+msgid "Show on Website"
+msgstr ""
+
+#: .\registry\models.py:47
+msgid "Show startup on the startup explore page."
+msgstr ""
+
+#: .\registry\models.py:53 .\registry\models.py:173
+msgid "Startup"
+msgstr ""
+
+#: .\registry\models.py:54 .\templates\includes\subnav.html:10
+msgid "Startups"
+msgstr ""
+
+#: .\registry\models.py:61
+msgid "Category"
+msgstr ""
+
+#: .\registry\models.py:62 .\registry\models.py:134 .\registry\models.py:196
+#: .\registry\models.py:228 .\registry\models.py:299
+msgid "Slug"
+msgstr ""
+
+#: .\registry\models.py:82
+msgid "Startup Category"
+msgstr ""
+
+#: .\registry\models.py:83
+msgid "Startup Categories"
+msgstr ""
+
+#: .\registry\models.py:89
+msgid "Audience"
+msgstr ""
+
+#: .\registry\models.py:99
+msgid "Target Audiences"
+msgstr ""
+
+#: .\registry\models.py:109 .\registry\models.py:328
+msgid "Address"
+msgstr ""
+
+#: .\registry\models.py:110
+msgid "Funds Available"
+msgstr ""
+
+#: .\registry\models.py:110
+msgid "Total funds available for investment in USD"
+msgstr ""
+
+#: .\registry\models.py:112 .\registry\models.py:155
+msgid "Organization Type"
+msgstr ""
+
+#: .\registry\models.py:113 .\registry\models.py:161
+msgid "Affiliation"
+msgstr ""
+
+#: .\registry\models.py:114 .\registry\models.py:354
+msgid "Application Link"
+msgstr ""
+
+#: .\registry\models.py:114
+msgid "Link to apply for investment or partnership"
+msgstr ""
+
+#: .\registry\models.py:119
+msgid "Show organization on the organization explore page."
+msgstr ""
+
+#: .\registry\models.py:125
+msgid "Organization"
+msgstr ""
+
+#: .\registry\models.py:126 .\templates\includes\subnav.html:11
+msgid "Organizations"
+msgstr ""
+
+#: .\registry\models.py:133
+msgid "Organization Type Name"
+msgstr ""
+
+#: .\registry\models.py:156
+msgid "Organization Types"
+msgstr ""
+
+#: .\registry\models.py:167
+msgid "Organization Affiliation"
+msgstr ""
+
+#: .\registry\models.py:168
+msgid "Organization Affiliations"
+msgstr ""
+
+#: .\registry\models.py:174
+msgid "Investor"
+msgstr ""
+
+#: .\registry\models.py:175
+msgid "Investment Amount"
+msgstr ""
+
+#: .\registry\models.py:176
+msgid "Details"
+msgstr ""
+
+#: .\registry\models.py:176
+msgid "Additional details about the investment"
+msgstr ""
+
+#: .\registry\models.py:177
+msgid "Investment Date"
+msgstr ""
+
+#: .\registry\models.py:177
+msgid "Date of the deal"
+msgstr ""
+
+#: .\registry\models.py:178
+msgid "Investment Stage"
+msgstr ""
+
+#: .\registry\models.py:187
+msgid "Investment"
+msgstr ""
+
+#: .\registry\models.py:188
+msgid "Investments"
+msgstr ""
+
+#: .\registry\models.py:194 .\registry\models.py:226
+msgid "Stage Name"
+msgstr ""
+
+#: .\registry\models.py:262
+msgid "Managing Organizations"
+msgstr ""
+
+#: .\registry\models.py:262
+msgid "Organizations managing the incubator program"
+msgstr ""
+
+#: .\registry\models.py:264
+msgid "Mode"
+msgstr ""
+
+#: .\registry\models.py:265
+msgid "Online"
+msgstr ""
+
+#: .\registry\models.py:266
+msgid "Offline"
+msgstr ""
+
+#: .\registry\models.py:267
+msgid "Hybrid"
+msgstr ""
+
+#: .\registry\models.py:268
+msgid "Mode of operation for the incubator"
+msgstr ""
+
+#: .\registry\models.py:273
+msgid "Program Type"
+msgstr ""
+
+#: .\registry\models.py:273
+msgid "Type of support program"
+msgstr ""
+
+#: .\registry\models.py:278 .\registry\models.py:330
+msgid "Status"
+msgstr ""
+
+#: .\registry\models.py:279
+msgid "Active"
+msgstr ""
+
+#: .\registry\models.py:280
+msgid "Inactive"
+msgstr ""
+
+#: .\registry\models.py:281
+msgid "Archived"
+msgstr ""
+
+#: .\registry\models.py:282
+msgid "Current status of the incubator program"
+msgstr ""
+
+#: .\registry\models.py:291
+msgid "Support Program"
+msgstr ""
+
+#: .\registry\models.py:292 .\templates\includes\subnav.html:9
+msgid "Support Programs"
+msgstr ""
+
+#: .\registry\models.py:297
+msgid "Type"
+msgstr ""
+
+#: .\registry\models.py:320
+msgid "Support Program Type"
+msgstr ""
+
+#: .\registry\models.py:321
+msgid "Support Program Types"
+msgstr ""
+
+#: .\registry\models.py:326
+msgid "Program"
+msgstr ""
+
+#: .\registry\models.py:327
+msgid "Cycle Name"
+msgstr ""
+
+#: .\registry\models.py:331
+msgid "Upcoming"
+msgstr ""
+
+#: .\registry\models.py:332
+msgid "Ongoing"
+msgstr ""
+
+#: .\registry\models.py:333
+msgid "Completed"
+msgstr ""
+
+#: .\registry\models.py:334
+msgid "Cancelled"
+msgstr ""
+
+#: .\registry\models.py:335
+msgid "Current status of the program cycle"
+msgstr ""
+
+#: .\registry\models.py:337
+msgid "Start Date"
+msgstr ""
+
+#: .\registry\models.py:338
+msgid "End Date"
+msgstr ""
+
+#: .\registry\models.py:340
+msgid "Duration"
+msgstr ""
+
+#: .\registry\models.py:340
+msgid "Duration of the program (e.g., 6 months, 1 year)"
+msgstr ""
+
+#: .\registry\models.py:341
+msgid "Capacity"
+msgstr ""
+
+#: .\registry\models.py:341
+msgid "Maximum number of startups that can be supported at a time"
+msgstr ""
+
+#: .\registry\models.py:343
+msgid "Notes"
+msgstr ""
+
+#: .\registry\models.py:343
+msgid "Additional notes about the program cycle"
+msgstr ""
+
+#: .\registry\models.py:344
+msgid "Participating Startups"
+msgstr ""
+
+#: .\registry\models.py:344
+msgid "Startups participating in this program cycle"
+msgstr ""
+
+#: .\registry\models.py:346
+msgid "Fee Structure"
+msgstr ""
+
+#: .\registry\models.py:346
+msgid "Details about the fee structure for the program (if any)"
+msgstr ""
+
+#: .\registry\models.py:348
+msgid "Application Status"
+msgstr ""
+
+#: .\registry\models.py:349
+msgid "Open"
+msgstr ""
+
+#: .\registry\models.py:350
+msgid "Closed"
+msgstr ""
+
+#: .\registry\models.py:351
+msgid "Will be announced"
+msgstr ""
+
+#: .\registry\models.py:352
+msgid "Current application status for the program cycle"
+msgstr ""
+
+#: .\registry\models.py:354
+msgid "Link to apply for the incubator program"
+msgstr ""
+
+#: .\registry\models.py:363
+msgid "Support Program Cycle"
+msgstr ""
+
+#: .\registry\models.py:364
+msgid "Support Program Cycles"
+msgstr ""
+
+#: .\space\forms.py:13
+msgid "Your phone to which we can call"
+msgstr "Ваш телефон для связи"
+
+#: .\space\forms.py:17
+msgid "Your startup name"
+msgstr "Название вашего стартапа"
+
+#: .\space\forms.py:18
+msgid "Link to your pitchdeck"
+msgstr "Ссылка на презентацию"
+
+#: .\space\forms.py:23 .\space\models.py:8
+msgid "Phone"
+msgstr "Телефон"
+
+#: .\space\forms.py:25 .\space\models.py:19
+msgid "Startup Name"
+msgstr "Название стартапа"
+
+#: .\space\forms.py:26 .\space\models.py:20
+msgid "Startup Pitchdeck"
+msgstr "Презентация стартапа"
+
+#: .\space\forms.py:34
+msgid "Select your region"
+msgstr "Выберите регион"
+
+#: .\space\forms.py:52
+msgid "Phone is required."
+msgstr "Укажите телефон."
+
+#: .\space\forms.py:58
+msgid "Region is required."
+msgstr "Укажите регион."
+
+#: .\space\forms.py:64
+msgid "Startup name is required."
+msgstr "Укажите название стартапа."
+
+#: .\space\forms.py:70
+msgid "Pitchdeck is required."
+msgstr "Укажите ссылку на презентацию."
+
+#: .\space\models.py:11
+msgid "Andijan"
+msgstr "Андижан"
+
+#: .\space\models.py:12
+msgid "Ferghana"
+msgstr "Фергана"
+
+#: .\space\models.py:13
+msgid "Namangan"
+msgstr "Наманган"
+
+#: .\space\models.py:14
+msgid "Surkhandarya"
+msgstr "Сурхандарья"
+
+#: .\space\models.py:29
+msgid "Participant"
+msgstr "Участник"
+
+#: .\space\models.py:30
+msgid "Participants"
+msgstr "Участники"
+
+#: .\space\views.py:17
+msgid "Thank you for your application. We will contact you very soon."
+msgstr "Спасибо за заявку! Мы свяжемся с вами в ближайшее время."
+
+#: .\templates\404.html:12
+msgid "Lost in Space? So is this Page!"
+msgstr ""
+
+#: .\templates\404.html:13
+msgid "We couldn\\"
+msgstr ""
+
+#: .\templates\500.html:12
+msgid "Server error!"
+msgstr ""
+
+#: .\templates\500.html:13
+msgid "Oops! Something went wrong on our end. Please try again in a moment."
+msgstr ""
+
+#: .\templates\contribute.html:14
+msgid ""
+"Whether you want to provide updated information, suggest new ideas, share "
+"success stories, or offer your time and skills in another way, we'd love to "
+"hear from you. We believe in the power of community contribution to grow and "
+"enrich this resource. Please use the form below to tell us how you'd like to "
+"contribute. We appreciate your support!"
+msgstr ""
+
+#: .\templates\contribute.html:50
+msgid "Send message"
+msgstr ""
+
+#: .\templates\explore_organizations.html:33
+#: .\templates\explore_programs.html:28
+msgid "Apply for support"
+msgstr ""
+
+#: .\templates\explore_organizations.html:48
+msgid "Organization types"
+msgstr ""
+
+#: .\templates\explore_organizations.html:77
+#: .\templates\explore_programs.html:63 .\templates\explore_startups.html:92
+msgid "Prev"
+msgstr ""
+
+#: .\templates\explore_organizations.html:79
+#: .\templates\explore_programs.html:65 .\templates\explore_startups.html:94
+msgid "of"
+msgstr ""
+
+#: .\templates\explore_organizations.html:81
+#: .\templates\explore_programs.html:67 .\templates\explore_startups.html:96
+msgid "next"
+msgstr ""
+
+#: .\templates\explore_programs.html:47
+msgid "Program types"
+msgstr ""
+
+#: .\templates\explore_startups.html:48
+msgid "Spheres"
+msgstr ""
+
+#: .\templates\explore_startups.html:61
+msgid "Funding stages"
+msgstr ""
+
+#: .\templates\explore_startups.html:74
+msgid "Development stages"
+msgstr ""
+
+#: .\templates\index.html:12
+msgid "Startup Guide"
+msgstr "Стартап Гид"
+
+#: .\templates\index.html:13
+msgid ""
+"Go-to space for exploring the startup scene, helping you quickly find the "
+"right programs, funding, and support to get your idea moving."
+msgstr ""
+"Пространство для знакомства со стартап-экосистемой, которое поможет быстро "
+"найти нужные программы, финансирование и поддержку для запуска вашей идеи."
+
+#: .\templates\index.html:16
+msgid "Explore"
+msgstr ""
+
+#: .\templates\index.html:17
+msgid "Contribute"
+msgstr ""
+
+#: .\templates\startup_support_program.html:14
+msgid "Regional Startup Support Program"
+msgstr "Программа поддержки стартапов в регионах"
+
+#: .\templates\startup_support_program.html:77
+msgid "Submit application"
+msgstr "Подать заявку"
+
+#: .\templates\startup_support_program.html:84
+msgid "About the Program"
+msgstr "О программе"
+
+#: .\templates\startup_support_program.html:85
+msgid ""
+"This hybrid program is designed to empower regional youth through a "
+"structured mix of offline bootcamps, online mentorship sessions, and final "
+"demo events. We are looking for dedicated youth teams with early-stage "
+"digital entrepreneurship ideas and a working prototype."
+msgstr "Эта гибридная программа разработана для расширения возможностей региональной молодежи через структурированное сочетание офлайн-буткемпов, онлайн-менторских сессий и финальных демо-дней. Мы ищем целеустремленные молодежные команды с цифровыми бизнес-идеями на ранней стадии и рабочим прототипом."
+
+#: .\templates\startup_support_program.html:89
+msgid "Who Can Apply"
+msgstr "Кто может подать заявку"
+
+#: .\templates\startup_support_program.html:90
+msgid ""
+"Teams based in Termez (Surkhandarya), Ferghana, Andijan, and Namangan. The "
+"program will select an initial cohort of 30 startup teams."
+msgstr "Стартапы из Термеза (Сурхандарьинская область), Ферганы, Андижана и Намангана. Команда отберет первоначальную когорту из 30 стартап."
+
+#: .\templates\startup_support_program.html:96
+msgid "Program Team"
+msgstr "Команда программы"
+
+#: .\templates\startup_support_program.html:97
+msgid ""
+"Our Program Team is a dedicated collective of mentors and ecosystem builders "
+"committed to bridging the gap between a regional idea and a market-ready "
+"digital product."
+msgstr "Наша программная команда — это преданное своему делу сообщество менторов, стремящихся сократить разрыв между региональной идеей и готовым к выходу на рынок цифровым продуктом."
+
+#: .\templates\startup_support_program.html:101
+msgid "Farrukh Maksumov"
+msgstr "Фаррух Максумов"
+
+#: .\templates\startup_support_program.html:106
+msgid "Oybek Batirov"
+msgstr "Ойбек Батиров"
+
+#: .\templates\startup_support_program.html:111
+msgid "Usmon Rakhimjanov"
+msgstr "Усмон Рахимжанов"
+
+#: .\templates\startup_support_program.html:116
+msgid "Azizbek Kurbanov"
+msgstr "Азизбек Курбанов"
+
+#: .\templates\startup_support_program.html:122
+msgid "Program Timeline and Key Dates"
+msgstr "График программы и ключевые даты"
+
+#: .\templates\startup_support_program.html:124
+msgid "Application Deadline:"
+msgstr "Крайний срок подачи заявок:"
+
+#: .\templates\startup_support_program.html:124
+msgid "April 10"
+msgstr "10 апреля"
+
+#: .\templates\startup_support_program.html:125
+msgid "Offline Bootcamps:"
+msgstr "Офлайн буткемп:"
+
+#: .\templates\startup_support_program.html:125
+msgid ""
+"April 16-17 in Termez, and April 23-24 in Ferghana. These intensive 2-day "
+"workshops focus on customer development, MVP design, and Lean startup "
+"methodologies."
+msgstr "16–17 апреля в Термезе и 23–24 апреля в Фергане. Эти интенсивные двухдневные воркшопы посвящены Customer Development, проектированию MVP и методологиям Lean Startup."
+
+#: .\templates\startup_support_program.html:126
+msgid "Online Mentorship:"
+msgstr "Онлайн менторство:"
+
+#: .\templates\startup_support_program.html:126
+msgid ""
+"Late April to early May, featuring specialized modules on Sales/Marketing, "
+"Financial Modelling, AI for Startups, and Fundraising/Working with VCs."
+msgstr "Конец апреля – начало мая: специализированные модули по маркетингу и продажам, финансовому моделированию, ИИ для стартапов, а также фандрейзингу и работе с венчурными инвесторами."
+
+#: .\templates\startup_support_program.html:127
+msgid "Demo Days:"
+msgstr "Демо-дни:"
+
+#: .\templates\startup_support_program.html:127
+msgid ""
+"May 13-14 in Termez, and May 25-26 in Ferghana. Teams will pitch their "
+"polished ideas to local ecosystem partners and venture capital "
+"representatives."
+msgstr "13–14 мая в Термезе и 25–26 мая в Фергане. Команды представят свои стартапы представителям стартап экосистемы."

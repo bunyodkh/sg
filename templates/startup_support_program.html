@@ -1,0 +1,137 @@
+{% extends '_base.html' %}
+
+{% load static %}
+
+{% load i18n %}
+
+{% block content %}
+
+{% include 'includes/notification.html'%}
+
+<section class="section">
+    <div class="hero">
+        <div class="hero-body">
+            <h1 class="program-title heading-extrabold">{% trans 'Regional Startup Support Program' %}</h1>
+            
+            <div class="form-container">
+                {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                <form class="startup-support-program-form" method="post" novalidate action="{% url 'space:startup-support-program' %}" class="form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.name.label_tag }}
+                        {{ form.name }}
+                        {% if form.name.errors %}
+                        <div class="form-error">{{ form.name.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.email.label_tag }}
+                        {{ form.email }}
+                        {% if form.email.errors %}
+                        <div class="form-error">{{ form.email.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.phone.label_tag }}
+                        {{ form.phone }}
+                        {% if form.phone.errors %}
+                        <div class="form-error">{{ form.phone.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.region.label_tag }}
+                        {{ form.region }}
+                        {% if form.region.errors %}
+                            <div class="form-error">{{ form.region.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.startup_name.label_tag }}
+                        {{ form.startup_name }}
+                        {% if form.startup_name.errors %}
+                        <div class="form-error">{{ form.startup_name.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.startup_pitchdeck.label_tag }}
+                        {{ form.startup_pitchdeck }}
+                        {% if form.startup_pitchdeck.errors %}
+                        <div class="form-error">{{ form.startup_pitchdeck.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">{% trans 'Submit application' %}</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="hero-side">
+            <div class="hero-side-block">
+                <h3>{% trans 'About the Program' %}</h3>
+                <p class="text-light">{% trans 'This hybrid program is designed to empower regional youth through a structured mix of offline bootcamps, online mentorship sessions, and final demo events. We are looking for dedicated youth teams with early-stage digital entrepreneurship ideas and a working prototype.'%}</p>
+            </div>
+
+            <div class="hero-side-block">
+                <h3>{% trans 'Who Can Apply' %}</h3>
+                <p class="text-light">{% trans 'Teams based in Termez (Surkhandarya), Ferghana, Andijan, and Namangan. The program will select an initial cohort of 30 startup teams.' %}
+
+                </p>
+            </div>
+
+            <div class="hero-side-block">
+                <h3>{% trans 'Program Team'%}</h3>
+                <p class="text-light">{% trans 'Our Program Team is a dedicated collective of mentors and ecosystem builders committed to bridging the gap between a regional idea and a market-ready digital product.' %}</p>
+                <div class="team-members">
+                    <div class="member">
+                        <img src="{% static 'images/fmaksumov.jpg' %}" alt="Farrukh Maksumov">
+                        <p><a href="https://www.linkedin.com/in/farrukh-maksumov/" target="_blank">{% trans 'Farrukh Maksumov' %}</a></p>
+                    </div>
+
+                    <div class="member">
+                        <img src="{% static 'images/obatirov.jpg' %}" alt="Oybek Batirov">
+                        <p><a href="https://www.linkedin.com/in/oybek-batirov/" target="_blank">{% trans 'Oybek Batirov' %}</a></p>
+                    </div>
+
+                    <div class="member">
+                        <img src="{% static 'images/urakhimjanov.jpg' %}" alt="Usmon Rakhimjanov">
+                        <p><a href="https://www.linkedin.com/in/usmon-rakhimjanov-69a4a82/" target="_blank">{% trans 'Usmon Rakhimjanov' %} </a></p>
+                    </div>
+
+                    <div class="member">
+                        <img src="{% static 'images/akurbonov.jpg' %}" alt="Azizbek Kurbanov">
+                        <p><a href="https://www.linkedin.com/in/azizbek-kurbonov/" target="_blank">{% trans 'Azizbek Kurbanov' %}</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-side-block">
+                <h3>{% trans 'Program Timeline and Key Dates' %}</h3>
+                <ul class="text-light">
+                    <li><span>{% trans 'Application Deadline:' %}</span>{% trans 'April 10' %}</li>
+                    <li><span>{% trans 'Offline Bootcamps:' %}</span>{% trans 'April 16-17 in Termez, and April 23-24 in Ferghana. These intensive 2-day workshops focus on customer development, MVP design, and Lean startup methodologies.'%}</li>
+                    <li><span>{% trans 'Online Mentorship:'%}</span>{% trans 'Late April to early May, featuring specialized modules on Sales/Marketing, Financial Modelling, AI for Startups, and Fundraising/Working with VCs.' %}</li> 
+                    <li><span>{% trans 'Demo Days:'%}</span>{% trans 'May 13-14 in Termez, and May 25-26 in Ferghana. Teams will pitch their polished ideas to local ecosystem partners and venture capital representatives.' %}</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% include 'includes/bottom-promotion.html' %}
+
+{% endblock content %}

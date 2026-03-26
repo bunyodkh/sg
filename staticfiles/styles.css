@@ -581,6 +581,11 @@ textarea:-ms-input-placeholder {
 		width: 100%;
 	}
 
+	.hero-side {
+		margin-top: 2rem;
+		width: 100%;
+	}
+
 	.hero-title {
 		font-size: 3rem;
 	}
@@ -607,6 +612,18 @@ textarea:-ms-input-placeholder {
 
 	.menu {
 		flex-wrap: wrap;
+	}
+
+	.form-container {
+		width: 100%;
+	}
+
+	.member {
+		width: 45%;
+	}
+	.btn-primary {
+		margin-right: 0;
+		width: 100%;
 	}
 
 }

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-26 20:50+0500\n"
+"POT-Creation-Date: 2026-04-01 22:28+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,23 +20,23 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\config\settings.py:118
+#: .\config\settings.py:116
 msgid "English"
 msgstr ""
 
-#: .\config\settings.py:119
+#: .\config\settings.py:117
 msgid "Russian"
 msgstr ""
 
-#: .\config\settings.py:120
+#: .\config\settings.py:118
 msgid "Uzbek"
 msgstr ""
 
-#: .\contribute\forms.py:11 .\space\forms.py:11
+#: .\contribute\forms.py:11 .\space\forms.py:14
 msgid "Your fullname"
 msgstr "Ваше полное имя"
 
-#: .\contribute\forms.py:12 .\space\forms.py:12
+#: .\contribute\forms.py:12 .\space\forms.py:15
 msgid "Your email address to which we can reply"
 msgstr "Ваш email для связи"
 
@@ -45,13 +45,13 @@ msgid "Describe how would you like to contribute"
 msgstr ""
 
 #: .\contribute\forms.py:16 .\contribute\models.py:6 .\registry\models.py:9
-#: .\registry\models.py:105 .\registry\models.py:257 .\space\forms.py:21
+#: .\registry\models.py:105 .\registry\models.py:257 .\space\forms.py:28
 #: .\space\models.py:6
 msgid "Name"
 msgstr "Имя"
 
 #: .\contribute\forms.py:17 .\contribute\models.py:7 .\registry\models.py:108
-#: .\registry\models.py:260 .\space\forms.py:22 .\space\models.py:7
+#: .\registry\models.py:260 .\space\forms.py:29 .\space\models.py:7
 msgid "Email"
 msgstr "Электронная почта"
 
@@ -59,11 +59,11 @@ msgstr "Электронная почта"
 msgid "Message"
 msgstr ""
 
-#: .\contribute\forms.py:28 .\space\forms.py:40
+#: .\contribute\forms.py:28 .\space\forms.py:62
 msgid "Name is required."
 msgstr "Имя обязательно."
 
-#: .\contribute\forms.py:34 .\space\forms.py:46
+#: .\contribute\forms.py:34 .\space\forms.py:68
 msgid "Email is required."
 msgstr "Укажите email."
 
@@ -71,11 +71,11 @@ msgstr "Укажите email."
 msgid "Message is required."
 msgstr ""
 
-#: .\contribute\models.py:13 .\space\models.py:25
+#: .\contribute\models.py:13 .\space\models.py:67
 msgid "Created At"
 msgstr ""
 
-#: .\contribute\models.py:14 .\space\models.py:26
+#: .\contribute\models.py:14 .\space\models.py:68
 msgid "Updated At"
 msgstr ""
 
@@ -124,7 +124,7 @@ msgstr ""
 msgid "Select Country"
 msgstr ""
 
-#: .\registry\models.py:18 .\registry\models.py:271 .\space\forms.py:24
+#: .\registry\models.py:18 .\registry\models.py:271 .\space\forms.py:31
 #: .\space\models.py:17
 msgid "Region"
 msgstr "Регион"
@@ -490,47 +490,119 @@ msgstr ""
 msgid "Support Program Cycles"
 msgstr ""
 
-#: .\space\forms.py:13
+#: .\space\forms.py:16
 msgid "Your phone to which we can call"
 msgstr "Ваш телефон для связи"
 
-#: .\space\forms.py:17
+#: .\space\forms.py:18
 msgid "Your startup name"
 msgstr "Название вашего стартапа"
 
-#: .\space\forms.py:18
+#: .\space\forms.py:19
+msgid "Describe your startup"
+msgstr "Опишите свой стартап"
+
+#: .\space\forms.py:20
 msgid "Link to your pitchdeck"
 msgstr "Ссылка на презентацию"
 
-#: .\space\forms.py:23 .\space\models.py:8
+#: .\space\forms.py:22
+msgid "What and whose problem are you solving?"
+msgstr "Какую и чью проблему решаете?"
+
+#: .\space\forms.py:23
+msgid "Describe your solution"
+msgstr "Опишите свое решение"
+
+#: .\space\forms.py:24
+msgid "Describe your traction"
+msgstr "Опишите ваш трекшн (достижения)."
+
+#: .\space\forms.py:25 .\space\models.py:47
+msgid "Describe your team"
+msgstr "Расскажите про свою команду"
+
+#: .\space\forms.py:30 .\space\models.py:8
 msgid "Phone"
 msgstr "Телефон"
 
-#: .\space\forms.py:25 .\space\models.py:19
+#: .\space\forms.py:32 .\space\models.py:19
 msgid "Startup Name"
 msgstr "Название стартапа"
 
-#: .\space\forms.py:26 .\space\models.py:20
+#: .\space\forms.py:33 .\space\models.py:20
+msgid "Startup Description"
+msgstr "Описание стартапа"
+
+#: .\space\forms.py:34 .\space\models.py:21
 msgid "Startup Pitchdeck"
 msgstr "Презентация стартапа"
 
-#: .\space\forms.py:34
+#: .\space\forms.py:35 .\space\models.py:34
+msgid "Startup Stage"
+msgstr "Стадия развития стартапа"
+
+#: .\space\forms.py:36
+msgid "Problem"
+msgstr "Проблема"
+
+#: .\space\forms.py:37
+msgid "Solution"
+msgstr "Решение"
+
+#: .\space\forms.py:38
+msgid "Traction"
+msgstr "Трекшн"
+
+#: .\space\forms.py:39
+msgid "Team Description"
+msgstr "Информация о команде"
+
+#: .\space\forms.py:47
 msgid "Select your region"
 msgstr "Выберите регион"
 
-#: .\space\forms.py:52
+#: .\space\forms.py:48
+msgid "Select startup stage"
+msgstr "Выберите стадию стартапа"
+
+#: .\space\forms.py:74
 msgid "Phone is required."
 msgstr "Укажите телефон."
 
-#: .\space\forms.py:58
+#: .\space\forms.py:80
 msgid "Region is required."
 msgstr "Укажите регион."
 
-#: .\space\forms.py:64
+#: .\space\forms.py:86
 msgid "Startup name is required."
 msgstr "Укажите название стартапа."
 
-#: .\space\forms.py:70
+#: .\space\forms.py:92
+msgid "Startup description is required."
+msgstr "Необходимо описание стартапа."
+
+#: .\space\forms.py:98
+msgid "Startup stage is required."
+msgstr "Необходимо указать стадию стартапа."
+
+#: .\space\forms.py:104
+msgid "Problem is required."
+msgstr "Укажите проблему."
+
+#: .\space\forms.py:110
+msgid "Solution is required."
+msgstr "Укажите ваше решение."
+
+#: .\space\forms.py:116
+msgid "Traction is required."
+msgstr "Необходимо указать трекшн (достижения)."
+
+#: .\space\forms.py:122
+msgid "Team description is required."
+msgstr "Необходимо описание команды."
+
+#: .\space\forms.py:128
 msgid "Pitchdeck is required."
 msgstr "Укажите ссылку на презентацию."
 
@@ -550,11 +622,47 @@ msgstr "Наманган"
 msgid "Surkhandarya"
 msgstr "Сурхандарья"
 
-#: .\space\models.py:29
+#: .\space\models.py:24
+msgid "Idea/Prototype"
+msgstr "Идея / Прототип"
+
+#: .\space\models.py:25
+msgid "MVP"
+msgstr "Минимально жизнеспособный продукт (МВП)"
+
+#: .\space\models.py:26
+msgid "First Users"
+msgstr "Первые пользователи"
+
+#: .\space\models.py:27
+msgid "Revenue"
+msgstr "Выручка"
+
+#: .\space\models.py:28
+msgid "Breakeven Point"
+msgstr "Точка безубыточности"
+
+#: .\space\models.py:37
+msgid "Current stage of the startup"
+msgstr "Текущая стадия стартапа"
+
+#: .\space\models.py:41
+msgid "For whom and what is the problem?"
+msgstr "Для кого эта проблема и в чём она заключается?"
+
+#: .\space\models.py:53
+msgid "Describe the solution your startup offers"
+msgstr "Опишите решение, которое предлагает ваш стартап."
+
+#: .\space\models.py:59
+msgid "Briefly describe the traction your startup has achieved"
+msgstr "Кратко опишите трекшн (успехи), которых достиг ваш стартап."
+
+#: .\space\models.py:71
 msgid "Participant"
 msgstr "Участник"
 
-#: .\space\models.py:30
+#: .\space\models.py:72
 msgid "Participants"
 msgstr "Участники"
 
@@ -655,99 +763,116 @@ msgstr ""
 msgid "Regional Startup Support Program"
 msgstr "Программа поддержки стартапов в регионах"
 
-#: .\templates\startup_support_program.html:77
+#: .\templates\startup_support_program.html:125
 msgid "Submit application"
 msgstr "Подать заявку"
 
-#: .\templates\startup_support_program.html:84
+#: .\templates\startup_support_program.html:132
 msgid "About the Program"
 msgstr "О программе"
 
-#: .\templates\startup_support_program.html:85
+#: .\templates\startup_support_program.html:133
 msgid ""
 "This hybrid program is designed to empower regional youth through a "
 "structured mix of offline bootcamps, online mentorship sessions, and final "
 "demo events. We are looking for dedicated youth teams with early-stage "
 "digital entrepreneurship ideas and a working prototype."
-msgstr "Эта гибридная программа разработана для расширения возможностей региональной молодежи через структурированное сочетание офлайн-буткемпов, онлайн-менторских сессий и финальных демо-дней. Мы ищем целеустремленные молодежные команды с цифровыми бизнес-идеями на ранней стадии и рабочим прототипом."
+msgstr ""
+"Эта гибридная программа разработана для расширения возможностей региональной "
+"молодежи через структурированное сочетание офлайн-буткемпов, онлайн-"
+"менторских сессий и финальных демо-дней. Мы ищем целеустремленные молодежные "
+"команды с цифровыми бизнес-идеями на ранней стадии и рабочим прототипом."
 
-#: .\templates\startup_support_program.html:89
+#: .\templates\startup_support_program.html:137
 msgid "Who Can Apply"
 msgstr "Кто может подать заявку"
 
-#: .\templates\startup_support_program.html:90
+#: .\templates\startup_support_program.html:138
 msgid ""
-"Teams based in Termez (Surkhandarya), Ferghana, Andijan, and Namangan. The "
-"program will select an initial cohort of 30 startup teams."
-msgstr "Стартапы из Термеза (Сурхандарьинская область), Ферганы, Андижана и Намангана. Команда отберет первоначальную когорту из 30 стартап."
+"Teams based in Surkhandarya, Ferghana, Andijan, and Namangan. The program "
+"will select an initial cohort of 40 startup teams."
+msgstr "Стартапы из Сурхандарьи, Ферганы, Андижана и Намангана. Команда отберет первоначальную когорту из 40 стартап."
 
-#: .\templates\startup_support_program.html:96
+#: .\templates\startup_support_program.html:144
 msgid "Program Team"
 msgstr "Команда программы"
 
-#: .\templates\startup_support_program.html:97
+#: .\templates\startup_support_program.html:145
 msgid ""
 "Our Program Team is a dedicated collective of mentors and ecosystem builders "
 "committed to bridging the gap between a regional idea and a market-ready "
 "digital product."
-msgstr "Наша программная команда — это преданное своему делу сообщество менторов, стремящихся сократить разрыв между региональной идеей и готовым к выходу на рынок цифровым продуктом."
+msgstr ""
+"Наша программная команда — это преданное своему делу сообщество менторов, "
+"стремящихся сократить разрыв между региональной идеей и готовым к выходу на "
+"рынок цифровым продуктом."
 
-#: .\templates\startup_support_program.html:101
+#: .\templates\startup_support_program.html:149
 msgid "Farrukh Maksumov"
 msgstr "Фаррух Максумов"
 
-#: .\templates\startup_support_program.html:106
+#: .\templates\startup_support_program.html:154
 msgid "Oybek Batirov"
 msgstr "Ойбек Батиров"
 
-#: .\templates\startup_support_program.html:111
+#: .\templates\startup_support_program.html:159
 msgid "Usmon Rakhimjanov"
 msgstr "Усмон Рахимжанов"
 
-#: .\templates\startup_support_program.html:116
+#: .\templates\startup_support_program.html:164
 msgid "Azizbek Kurbanov"
 msgstr "Азизбек Курбанов"
 
-#: .\templates\startup_support_program.html:122
+#: .\templates\startup_support_program.html:170
 msgid "Program Timeline and Key Dates"
 msgstr "График программы и ключевые даты"
 
-#: .\templates\startup_support_program.html:124
+#: .\templates\startup_support_program.html:172
 msgid "Application Deadline:"
 msgstr "Крайний срок подачи заявок:"
 
-#: .\templates\startup_support_program.html:124
-msgid "April 10"
+#: .\templates\startup_support_program.html:172
+#, fuzzy
+#| msgid "April 10"
+msgid "April 10, 2026"
 msgstr "10 апреля"
 
-#: .\templates\startup_support_program.html:125
+#: .\templates\startup_support_program.html:173
 msgid "Offline Bootcamps:"
 msgstr "Офлайн буткемп:"
 
-#: .\templates\startup_support_program.html:125
+#: .\templates\startup_support_program.html:173
 msgid ""
 "April 16-17 in Termez, and April 23-24 in Ferghana. These intensive 2-day "
 "workshops focus on customer development, MVP design, and Lean startup "
 "methodologies."
-msgstr "16–17 апреля в Термезе и 23–24 апреля в Фергане. Эти интенсивные двухдневные воркшопы посвящены Customer Development, проектированию MVP и методологиям Lean Startup."
+msgstr ""
+"16–17 апреля в Термезе и 23–24 апреля в Фергане. Эти интенсивные двухдневные "
+"воркшопы посвящены Customer Development, проектированию MVP и методологиям "
+"Lean Startup."
 
-#: .\templates\startup_support_program.html:126
+#: .\templates\startup_support_program.html:174
 msgid "Online Mentorship:"
 msgstr "Онлайн менторство:"
 
-#: .\templates\startup_support_program.html:126
+#: .\templates\startup_support_program.html:174
 msgid ""
 "Late April to early May, featuring specialized modules on Sales/Marketing, "
 "Financial Modelling, AI for Startups, and Fundraising/Working with VCs."
-msgstr "Конец апреля – начало мая: специализированные модули по маркетингу и продажам, финансовому моделированию, ИИ для стартапов, а также фандрейзингу и работе с венчурными инвесторами."
+msgstr ""
+"Конец апреля – начало мая: специализированные модули по маркетингу и "
+"продажам, финансовому моделированию, ИИ для стартапов, а также фандрейзингу "
+"и работе с венчурными инвесторами."
 
-#: .\templates\startup_support_program.html:127
+#: .\templates\startup_support_program.html:175
 msgid "Demo Days:"
 msgstr "Демо-дни:"
 
-#: .\templates\startup_support_program.html:127
+#: .\templates\startup_support_program.html:175
 msgid ""
 "May 13-14 in Termez, and May 25-26 in Ferghana. Teams will pitch their "
 "polished ideas to local ecosystem partners and venture capital "
 "representatives."
-msgstr "13–14 мая в Термезе и 25–26 мая в Фергане. Команды представят свои стартапы представителям стартап экосистемы."
+msgstr ""
+"13–14 мая в Термезе и 25–26 мая в Фергане. Команды представят свои стартапы "
+"представителям стартап экосистемы."

@@ -17,7 +17,49 @@ class Participant(models.Model):
     region = models.CharField(max_length=20, choices=REGION_CHOICES, verbose_name=_('Region'), blank=True, null=True)
 
     startup_name = models.CharField(max_length=100, help_text=_('Startup Name'), blank=True, null=True)
+    startup_description = models.TextField(help_text=_('Startup Description'), blank=True, null=True)
     startup_pitchdeck = models.CharField(max_length=100, help_text=_('Startup Pitchdeck'), blank=True, null=True)
+
+    STARTUP_STAGE_CHOICES = [
+        ('idea_prototype', _('Idea/Prototype')),
+        ('mvp', _('MVP')),
+        ('first_users', _('First Users')),
+        ('revenue', _('Revenue')),
+        ('breakeven_point', _('Breakeven Point')),
+    ]
+
+    startup_stage = models.CharField(
+        max_length=20,
+        choices=STARTUP_STAGE_CHOICES,
+        verbose_name=_('Startup Stage'),
+        blank=True,
+        null=True,
+        help_text=_('Current stage of the startup'),
+    )
+
+    problem = models.TextField(
+        help_text=_('For whom and what is the problem?'),
+        blank=True,
+        null=True,
+    )
+
+    team_description = models.TextField(
+        help_text=_('Describe your team'),
+        blank=True,
+        null=True,
+    )
+
+    solution = models.TextField(
+        help_text=_('Describe the solution your startup offers'),
+        blank=True,
+        null=True,
+    )
+
+    traction = models.TextField(
+        help_text=_('Briefly describe the traction your startup has achieved'),
+        blank=True,
+        null=True,
+    )
 
     def __str__(self):
         return f"{self.name} - {self.email}"

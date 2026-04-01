@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-26 20:39+0500\n"
+"POT-Creation-Date: 2026-04-01 22:28+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,62 +17,63 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-#: .\config\settings.py:118
+
+#: .\config\settings.py:116
 msgid "English"
 msgstr ""
 
-#: .\config\settings.py:119
+#: .\config\settings.py:117
 msgid "Russian"
 msgstr ""
 
-#: .\config\settings.py:120
+#: .\config\settings.py:118
 msgid "Uzbek"
 msgstr ""
 
-#: .\contribute\forms.py:11 .\space\forms.py:11
+#: .\contribute\forms.py:11 .\space\forms.py:14
 msgid "Your fullname"
-msgstr ""
+msgstr "To'liq ismingiz"
 
-#: .\contribute\forms.py:12 .\space\forms.py:12
+#: .\contribute\forms.py:12 .\space\forms.py:15
 msgid "Your email address to which we can reply"
-msgstr ""
+msgstr "Siz bilan bog'lanishimiz mumkin bo'lgan elektron pochta manzilingiz"
 
 #: .\contribute\forms.py:13
 msgid "Describe how would you like to contribute"
 msgstr ""
 
 #: .\contribute\forms.py:16 .\contribute\models.py:6 .\registry\models.py:9
-#: .\registry\models.py:105 .\registry\models.py:257 .\space\forms.py:21
+#: .\registry\models.py:105 .\registry\models.py:257 .\space\forms.py:28
 #: .\space\models.py:6
 msgid "Name"
-msgstr ""
+msgstr "To'liq ism"
 
 #: .\contribute\forms.py:17 .\contribute\models.py:7 .\registry\models.py:108
-#: .\registry\models.py:260 .\space\forms.py:22 .\space\models.py:7
+#: .\registry\models.py:260 .\space\forms.py:29 .\space\models.py:7
 msgid "Email"
-msgstr ""
+msgstr "Elektron manzil"
 
 #: .\contribute\forms.py:18 .\contribute\models.py:8 .\contribute\models.py:17
 msgid "Message"
 msgstr ""
 
-#: .\contribute\forms.py:28 .\space\forms.py:40
+#: .\contribute\forms.py:28 .\space\forms.py:62
 msgid "Name is required."
-msgstr ""
+msgstr "Ism ko‘rsatilishi shart."
 
-#: .\contribute\forms.py:34 .\space\forms.py:46
+#: .\contribute\forms.py:34 .\space\forms.py:68
 msgid "Email is required."
-msgstr ""
+msgstr "Elektron pochta manzili ko‘rsatilishi shart."
 
 #: .\contribute\forms.py:40
 msgid "Message is required."
 msgstr ""
 
-#: .\contribute\models.py:13 .\space\models.py:25
+#: .\contribute\models.py:13 .\space\models.py:67
 msgid "Created At"
 msgstr ""
 
-#: .\contribute\models.py:14 .\space\models.py:26
+#: .\contribute\models.py:14 .\space\models.py:68
 msgid "Updated At"
 msgstr ""
 
@@ -121,7 +122,7 @@ msgstr ""
 msgid "Select Country"
 msgstr ""
 
-#: .\registry\models.py:18 .\registry\models.py:271 .\space\forms.py:24
+#: .\registry\models.py:18 .\registry\models.py:271 .\space\forms.py:31
 #: .\space\models.py:17
 msgid "Region"
 msgstr ""
@@ -487,77 +488,185 @@ msgstr ""
 msgid "Support Program Cycles"
 msgstr ""
 
-#: .\space\forms.py:13
+#: .\space\forms.py:16
 msgid "Your phone to which we can call"
-msgstr ""
-
-#: .\space\forms.py:17
-msgid "Your startup name"
-msgstr ""
+msgstr "Bog‘lanish uchun telefon raqami"
 
 #: .\space\forms.py:18
+msgid "Your startup name"
+msgstr "Startapingiz nomi"
+
+#: .\space\forms.py:19
+msgid "Describe your startup"
+msgstr "Startapingiz haqida ma’lumot bering"
+
+#: .\space\forms.py:20
 msgid "Link to your pitchdeck"
-msgstr ""
+msgstr "Pichdekka (pitch deck) havola"
 
-#: .\space\forms.py:23 .\space\models.py:8
+#: .\space\forms.py:22
+msgid "What and whose problem are you solving?"
+msgstr "Siz aynan qanday muammoni va kim uchun hal qilyapsiz?"
+
+#: .\space\forms.py:23
+msgid "Describe your solution"
+msgstr "Yechimingizni tavsiflang"
+
+#: .\space\forms.py:24
+msgid "Describe your traction"
+msgstr "Treksheningizni (erishilgan natijalarni) tavsiflang"
+
+#: .\space\forms.py:25 .\space\models.py:47
+msgid "Describe your team"
+msgstr "Jamoangizni tavsiflang"
+
+#: .\space\forms.py:30 .\space\models.py:8
 msgid "Phone"
-msgstr ""
+msgstr "Telefon"
 
-#: .\space\forms.py:25 .\space\models.py:19
+#: .\space\forms.py:32 .\space\models.py:19
 msgid "Startup Name"
-msgstr ""
+msgstr "Startapning nomi"
 
-#: .\space\forms.py:26 .\space\models.py:20
+#: .\space\forms.py:33 .\space\models.py:20
+msgid "Startup Description"
+msgstr "Startapning tasnifi"
+
+#: .\space\forms.py:34 .\space\models.py:21
 msgid "Startup Pitchdeck"
-msgstr ""
+msgstr "Startapning pitch deki"
 
-#: .\space\forms.py:34
+#: .\space\forms.py:35 .\space\models.py:34
+msgid "Startup Stage"
+msgstr "Startapning o'sish darajasi"
+
+#: .\space\forms.py:36
+msgid "Problem"
+msgstr "Muammo"
+
+#: .\space\forms.py:37
+msgid "Solution"
+msgstr "Yechim"
+
+#: .\space\forms.py:38
+msgid "Traction"
+msgstr "Trekshen (erishilgan natijalar)"
+
+#: .\space\forms.py:39
+msgid "Team Description"
+msgstr "Jamoa tasnifi"
+
+#: .\space\forms.py:47
 msgid "Select your region"
-msgstr ""
+msgstr "Xududingizni tanlang"
 
-#: .\space\forms.py:52
+#: .\space\forms.py:48
+msgid "Select startup stage"
+msgstr "Startap bosqichini tanlang"
+
+#: .\space\forms.py:74
 msgid "Phone is required."
-msgstr ""
+msgstr "Telefon raqami ko‘rsatilishi shart."
 
-#: .\space\forms.py:58
+#: .\space\forms.py:80
 msgid "Region is required."
-msgstr ""
+msgstr "Hudud ko‘rsatilishi shart."
 
-#: .\space\forms.py:64
+#: .\space\forms.py:86
 msgid "Startup name is required."
-msgstr ""
+msgstr "Startap nomi ko‘rsatilishi shart."
 
-#: .\space\forms.py:70
+#: .\space\forms.py:92
+msgid "Startup description is required."
+msgstr "Startap tavsifi ko‘rsatilishi shart."
+
+#: .\space\forms.py:98
+msgid "Startup stage is required."
+msgstr "Startap bosqichi ko‘rsatilishi shart."
+
+#: .\space\forms.py:104
+msgid "Problem is required."
+msgstr "Muammo ko‘rsatilishi shart."
+
+#: .\space\forms.py:110
+msgid "Solution is required."
+msgstr "Yechim ko‘rsatilishi shart."
+
+#: .\space\forms.py:116
+msgid "Traction is required."
+msgstr "Trekshen (erishilgan natijalar) ko‘rsatilishi shart."
+
+#: .\space\forms.py:122
+msgid "Team description is required."
+msgstr "Jamoa tavsifi ko‘rsatilishi shart."
+
+#: .\space\forms.py:128
 msgid "Pitchdeck is required."
-msgstr ""
+msgstr "Pichdek (pitch deck) ko‘rsatilishi shart."
 
 #: .\space\models.py:11
 msgid "Andijan"
-msgstr ""
+msgstr "Andijon"
 
 #: .\space\models.py:12
 msgid "Ferghana"
-msgstr ""
+msgstr "Farg'ona"
 
 #: .\space\models.py:13
 msgid "Namangan"
-msgstr ""
+msgstr "Namangan"
 
 #: .\space\models.py:14
 msgid "Surkhandarya"
-msgstr ""
+msgstr "Surxondaryo"
 
-#: .\space\models.py:29
+#: .\space\models.py:24
+msgid "Idea/Prototype"
+msgstr "G‘oya/Prototip"
+
+#: .\space\models.py:25
+msgid "MVP"
+msgstr "MVP"
+
+#: .\space\models.py:26
+msgid "First Users"
+msgstr "Ilk foydalanuvchilar"
+
+#: .\space\models.py:27
+msgid "Revenue"
+msgstr "Daromad"
+
+#: .\space\models.py:28
+msgid "Breakeven Point"
+msgstr "Zararsizlik nuqtasi (Breakeven point)"
+
+#: .\space\models.py:37
+msgid "Current stage of the startup"
+msgstr "Startapning hozirgi bosqichi"
+
+#: .\space\models.py:41
+msgid "For whom and what is the problem?"
+msgstr "Muammo kimga tegishli va u nimadan iborat?"
+
+#: .\space\models.py:53
+msgid "Describe the solution your startup offers"
+msgstr "Startapingiz taklif qilayotgan yechimni tavsiflang"
+
+#: .\space\models.py:59
+msgid "Briefly describe the traction your startup has achieved"
+msgstr "Startapingiz erishgan natijalarni (trekshenni) qisqacha tavsiflang"
+
+#: .\space\models.py:71
 msgid "Participant"
 msgstr ""
 
-#: .\space\models.py:30
+#: .\space\models.py:72
 msgid "Participants"
 msgstr ""
 
 #: .\space\views.py:17
 msgid "Thank you for your application. We will contact you very soon."
-msgstr ""
+msgstr "Arizangiz uchun tashakkur. Tezyora orada siz bilan bog'lanamiz."
 
 #: .\templates\404.html:12
 msgid "Lost in Space? So is this Page!"
@@ -646,6 +755,110 @@ msgstr ""
 msgid "Contribute"
 msgstr ""
 
-#: .\templates\startup_support_program.html:77
+#: .\templates\startup_support_program.html:14
+msgid "Regional Startup Support Program"
+msgstr "Startaplarni qo'llab-quvvatlash dasturi"
+
+#: .\templates\startup_support_program.html:125
 msgid "Submit application"
+msgstr "Arizani yuborish"
+
+#: .\templates\startup_support_program.html:132
+msgid "About the Program"
+msgstr "Dastur haqida"
+
+#: .\templates\startup_support_program.html:133
+msgid ""
+"This hybrid program is designed to empower regional youth through a "
+"structured mix of offline bootcamps, online mentorship sessions, and final "
+"demo events. We are looking for dedicated youth teams with early-stage "
+"digital entrepreneurship ideas and a working prototype."
 msgstr ""
+"Ushbu gibrid dastur hududiy yoshlarning imkoniyatlarini kengaytirish uchun "
+"mo'ljallangan bo'lib, u oflayn butkemplar, onlayn mentorlik sessiyalari va "
+"yakuniy demo tadbirlarini o'z ichiga oladi. Dastur raqamli tadbirkorlik "
+"sohasida boshlang'ich bosqichdagi g'oyalari va ishchi prototipiga ega "
+"bo'lgan intiluvchan yoshlar jamoalarini izlaydi."
+
+#: .\templates\startup_support_program.html:137
+msgid "Who Can Apply"
+msgstr "Kimlar ariza topshirishi mumkin?"
+
+#: .\templates\startup_support_program.html:138
+msgid ""
+"Teams based in Surkhandarya, Ferghana, Andijan, and Namangan. The program "
+"will select an initial cohort of 40 startup teams."
+msgstr ""
+"Surxondaryo, Fargʻona, Andijon va Namangan viloyatlarida joylashgan "
+"jamoalar. Dastur doirasida dastlabki 40 ta startap jamoasi saralab olinadi."
+
+#: .\templates\startup_support_program.html:144
+msgid "Program Team"
+msgstr "Dastur jamoasi"
+
+#: .\templates\startup_support_program.html:145
+msgid ""
+"Our Program Team is a dedicated collective of mentors and ecosystem builders "
+"committed to bridging the gap between a regional idea and a market-ready "
+"digital product."
+msgstr "Dastur jamoasi — g‘oyalar va bozorga tayyor raqamli mahsulotlar o‘rtasidagi farqni bartaraf etishga intiluvchi mentorlar hamda ekotizim yaratuvchilarining birdam jamoasidir."
+
+#: .\templates\startup_support_program.html:149
+msgid "Farrukh Maksumov"
+msgstr "Farruh Maksumov"
+
+#: .\templates\startup_support_program.html:154
+msgid "Oybek Batirov"
+msgstr "Oybek Botirov"
+
+#: .\templates\startup_support_program.html:159
+msgid "Usmon Rakhimjanov"
+msgstr "Usmon Rahimjonov"
+
+#: .\templates\startup_support_program.html:164
+msgid "Azizbek Kurbanov"
+msgstr "Azizbek Qurbonov"
+
+#: .\templates\startup_support_program.html:170
+msgid "Program Timeline and Key Dates"
+msgstr "Muhim sanalar"
+
+#: .\templates\startup_support_program.html:172
+msgid "Application Deadline:"
+msgstr "Ariza topshirish muddati:"
+
+#: .\templates\startup_support_program.html:172
+msgid "April 10, 2026"
+msgstr "10 Aprel, 2026"
+
+#: .\templates\startup_support_program.html:173
+msgid "Offline Bootcamps:"
+msgstr "Oflayn (yuzma-yuz) butkemplar:"
+
+#: .\templates\startup_support_program.html:173
+msgid ""
+"April 16-17 in Termez, and April 23-24 in Ferghana. These intensive 2-day "
+"workshops focus on customer development, MVP design, and Lean startup "
+"methodologies."
+msgstr "16-17-aprel Termizda va 23-24-aprel Farg‘onada. Ushbu 2 kunlik intensiv mashg'ulotlar mijozlarni topish (cusdev), MVPni ishalb chiqish va Lean startup metodologiyasini o'rganishga qaratilgan."
+
+#: .\templates\startup_support_program.html:174
+msgid "Online Mentorship:"
+msgstr "Onlayn (masofaviy) mentorlik:"
+
+#: .\templates\startup_support_program.html:174
+msgid ""
+"Late April to early May, featuring specialized modules on Sales/Marketing, "
+"Financial Modelling, AI for Startups, and Fundraising/Working with VCs."
+msgstr "Aprel oyining oxiridan may oyining boshigacha: Sotuv/Marketing, Moliyaviy modellashtirish, Startaplar uchun AI (Sun'iy intellekt) hamda Investitsiya jalb qilish (Fundraising) va venchur kapitalistlar (VC) bilan ishlash bo'yicha maxsus modullar."
+
+#: .\templates\startup_support_program.html:175
+msgid "Demo Days:"
+msgstr "Demo kunlari:"
+
+#: .\templates\startup_support_program.html:175
+msgid ""
+"May 13-14 in Termez, and May 25-26 in Ferghana. Teams will pitch their "
+"polished ideas to local ecosystem partners and venture capital "
+"representatives."
+msgstr "13-14-may Termizda va 25-26-may Farg‘onada. Jamoalar o‘zlarining shakllantirilgan g‘oyalarini mahalliy ekotizim hamkorlari va venchur kapital vakillariga taqdim etadilar (pitch qiladilar)."

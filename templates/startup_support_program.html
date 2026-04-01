@@ -74,6 +74,54 @@
                         {% endif %}
                     </div>
 
+                    <div class="form-group">
+                        {{ form.startup_description.label_tag }}
+                        {{ form.startup_description }}
+                        {% if form.startup_description.errors %}
+                        <div class="form-error">{{ form.startup_description.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.startup_stage.label_tag }}
+                        {{ form.startup_stage }}
+                        {% if form.startup_stage.errors %}
+                        <div class="form-error">{{ form.startup_stage.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.problem.label_tag }}
+                        {{ form.problem }}
+                        {% if form.problem.errors %}
+                        <div class="form-error">{{ form.problem.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.solution.label_tag }}
+                        {{ form.solution }}
+                        {% if form.solution.errors %}
+                        <div class="form-error">{{ form.solution.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.traction.label_tag }}
+                        {{ form.traction }}
+                        {% if form.traction.errors %}
+                        <div class="form-error">{{ form.traction.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.team_description.label_tag }}
+                        {{ form.team_description }}
+                        {% if form.team_description.errors %}
+                        <div class="form-error">{{ form.team_description.errors }}</div>
+                        {% endif %}
+                    </div>
+
                     <button type="submit" class="btn btn-primary">{% trans 'Submit application' %}</button>
                 </form>
             </div>
@@ -87,7 +135,7 @@
 
             <div class="hero-side-block">
                 <h3>{% trans 'Who Can Apply' %}</h3>
-                <p class="text-light">{% trans 'Teams based in Termez (Surkhandarya), Ferghana, Andijan, and Namangan. The program will select an initial cohort of 30 startup teams.' %}
+                <p class="text-light">{% trans 'Teams based in Surkhandarya, Ferghana, Andijan, and Namangan. The program will select an initial cohort of 40 startup teams.' %}
 
                 </p>
             </div>
